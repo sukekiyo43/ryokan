@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.p-menu__items {
+    display: flex;
+    color: $white;
+}
+
+.p-menu__item {}
+
+.p-menu__item-core {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+        justify-content: initial;
+        font-size: myrem(15);
+        font-weight: 400;
+        letter-spacing: .04em;
+        padding: myrem(17) myrem(16) myrem(15) myrem(16);
+    }
+}
+
+.p-menu__item-core:hover {
+    @include mq(md) {
+        opacity: 1;
+    }
+}
+
+.p-menu__item span {
+    position: relative;
+}
+
+.p-menu__item span::after {
+    @include mq(md) {
+        position: absolute;
+        bottom: myrem(10);
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+}
+
+.p-menu__item:hover span::after {
+    opacity: 0;
+    animation: border .8s ease-out forwards;
+}
+
+.p-menu__item:hover span::after {
+    bottom: myrem(-4);
+    visibility: visible;
+}
+
+@keyframes border {
+    0% {
+        opacity: 0;
+        transform: translateY(myrem(10));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p-menu__btn {
+    margin-left: myrem(14.5);
+}

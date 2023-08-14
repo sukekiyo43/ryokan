@@ -43,13 +43,13 @@
       </h1>
       <nav class="p-header__menu p-menu">
         <ul class="p-menu__items">
-          <li class="p-menu__item"><a href="">ここめいとについて</a></li>
-          <li class="p-menu__item"><a href="">宿泊</a></li>
-          <li class="p-menu__item"><a href="">お食事</a></li>
-          <li class="p-menu__item"><a href="">体験</a></li>
-          <li class="p-menu__item"><a href="">アクセス</a></li>
-          <li class="p-menu__item"><a href="">お問い合わせ</a></li>
-          <li class="p-menu__btn"><a href="">ご予約はこちら</a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>ここめいとについて</span></a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>宿泊</span></a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お食事</span></a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>体験</span></a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>アクセス</span></a></li>
+          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お問い合わせ</span></a></li>
+          <li class="p-menu__btn"><a class="c-btn1" href="">ご予約はこちら</a></li>
         </ul>
       </nav>
     </div>
@@ -65,17 +65,15 @@
           <div class="p-mv__img3">
             <img src="./images/mv3.jpg" alt="mv3">
           </div>
-          <div class="p-mv__title">
-            <p date-en="A place to spend time with loved ones, cocomate.">
-              大切な人と過ごす場所、<br>ここめいと。
-            </p>
-          </div>
+          <p class="p-mv__title" date-en="A place to spend time with loved ones, cocomate.">
+            大切な人と過ごす場所、<br>ここめいと。
+          </p>
         </div>
         <div class="p-mv__pagination">
           <div class="p-mv__pagination-numbers">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
+            <span class="p-mv__pagination-1">1</span>
+            <span class="p-mv__pagination-2">2</span>
+            <span class="p-mv__pagination-3">3</span>
           </div>
           <div class="p-mv__pagination-line"></div>
           <div class="p-mv__pagination-number3">3</div>
@@ -89,42 +87,48 @@
   </header>
 
   <main>
-    <section class="p-stay">
-      <div class="p-stay__body">
-        <h2>Cocomate Stay</h2>
-        <div class="p-stay__text-wrap">
-          <p class="p-stay__text">
-            大切な人と過ごす場所、
-            ここめいと。
-            日本の伝統と
-            現代の快適さが融合した、
-            穏やかな空間で
-            お迎えいたします。
-          </p>
-          <p class="p-stay__text">
-            四季折々の風情が楽しめる
-            ロケーションが特長です。
-          </p>
-          <p class="p-stay__text">
-            春は桜が咲き誇り、
-            夏は青々とした自然が
-            目を楽しませ、
-            秋は紅葉が鮮やかに染まり、
-            冬は雪景色が
-            美しい風景が広がります。
-            季節ごとの風情を
-            お楽しみいただきながら、
-            特別な思い出をつくりませんか。
-          </p>
+    <section class="p-stay l-stay">
+      <div class="p-stay__body-wrap">
+        <div class="p-stay__body">
+          <h2 class="p-stay__title">Cocomate Stay</h2>
+          <div class="p-stay__text-wrap">
+            <p class="p-stay__text">
+              <span>大切な人と過ごす場所、</span>
+              <span>ここめいと。</span>
+              <span>日本の伝統と</span>
+              <span>現代の快適さが融合した、</span>
+              <span>穏やかな空間で</span>
+              <span>お迎えいたします。</span>
+            </p>
+            <p class="p-stay__text">
+              <span>四季折々の風情が楽しめる</span>
+              <span>ロケーションが特長です。</span>
+            </p>
+            <p class="p-stay__text">
+              <span>春は桜が咲き誇り、</span>
+              <span>夏は青々とした自然が</span>
+              <span>目を楽しませ、</span>
+              <span>秋は紅葉が鮮やかに染まり、</span>
+              <span>冬は雪景色が</span>
+              <span>美しい風景が広がります。</span>
+              <span>季節ごとの風情を</span>
+              <span>お楽しみいただきながら、</span>
+              <span>特別な思い出をつくりませんか。</span>
+            </p>
+          </div>
+        </div>
+        <div class="p-stay__cloud1">
+          <img src="./images/stay-cloud1.png" alt="Cocomate Stayの背景雲1">
+        </div>
+        <div class="p-stay__cloud2">
+          <img src="./images/stay-cloud2.png" alt="Cocomate Stayの背景雲2">
         </div>
       </div>
-      <div class="p-stay__gallery">
-        <img src="" alt="">
-      </div>
+      <div class="p-stay__gallery"></div>
     </section>
 
     <section class="p-guest">
-      <h2 date-ja="客室案内">Guest Room</h2>
+      <h2 class="c-section-title" date-ja="客室案内">Guest Room</h2>
       <div class="p-guest__body">
         <div class="c-guidance">
           <p class="c-guidance__text">

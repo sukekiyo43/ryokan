@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.c-section-title {
+    position: relative;
+    font-size: 160px;
+    font-family: $font-title;
+    color: $text_en;
+    font-weight: 400;
+    letter-spacing: .04em;
+}
+
+.c-section-title::before {
+    font-family: $font-main;
+    top: 48px;
+    left: 117px;
+    position: absolute;
+    content: attr(date-ja);
+    font-size: 20px;
+    color: $text;
+    line-height: calc(24/20);
+    letter-spacing: .2em;
+    writing-mode: vertical-rl;
+}
