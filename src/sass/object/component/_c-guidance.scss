@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.c-guidance {
+    width: myrem(320);
+}
+
+.c-guidance__text {
+    font-size: myrem(15);
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: .04em;
+    margin-bottom: myrem(79);
+}
+
+.c-guidance__btn {
+    display: inline-block;
+    background-color: $text;
+    border: solid 1px $text;
+    transition: .3s;
+}
+
+.c-guidance__btn-core {
+    font-size: myrem(15);
+    font-family: $font-main;
+    display: inline-block;
+    // padding: 21px 87px 18px 89px;
+    padding: myrem(21) myrem(87) myrem(18) myrem(89);
+    background-color: $white;
+    letter-spacing: 0.04em;
+    line-height: calc(22.5/15);
+    border-radius: myrem(10);
+    transition: .3s;
+}
+
+.c-guidance__btn-wrap:hover,
+.c-guidance__btn-wrap:hover .c-guidance__btn {
+    @include mq(md) {
+        opacity: 1;
+    }
+}
+
+.c-guidance__btn-wrap:hover .c-guidance__btn-core {
+    @include mq(md) {
+        background-color: $text;
+        color: $white;
+    }
+}

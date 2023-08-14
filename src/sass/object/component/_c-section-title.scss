@@ -2,20 +2,21 @@
 
 .c-section-title {
     position: relative;
-    font-size: 160px;
+    font-size: myrem(160);
     font-family: $font-title;
     color: $text_en;
     font-weight: 400;
     letter-spacing: .04em;
+    line-height: 1;
 }
 
 .c-section-title::before {
     font-family: $font-main;
-    top: 48px;
-    left: 117px;
+    top: myrem(8);
+    left: myrem(117);
     position: absolute;
     content: attr(date-ja);
-    font-size: 20px;
+    font-size: myrem(20);
     color: $text;
     line-height: calc(24/20);
     letter-spacing: .2em;

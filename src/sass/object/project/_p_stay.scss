@@ -6,30 +6,30 @@
 
 .p-stay__body {
     position: relative;
-    padding-top: 235px;
+    padding-top: myrem(235);
     margin: 0 auto;
     width: fit-content;
-    padding-bottom: 118px;
+    padding-bottom: myrem(118);
 }
 
 .p-stay__body::before {
     position: absolute;
     content: '';
     background: url(../images/stay-sub-cloud1.png) no-repeat center center/cover;
-    bottom: 106px;
-    left: -255px;
-    width: 237px;
-    height: 66px;
+    bottom: myrem(107);
+    left: myrem(-255);
+    width: myrem(237);
+    height: myrem(66);
 }
 
 .p-stay__body::after {
     position: absolute;
     content: '';
-    width: 264px;
-    height: 69px;
+    width: myrem(264);
+    height: myrem(69);
     background: url(../images/stay-sub-cloud2.png) no-repeat center center/cover;
-    top: 122px;
-    right: -232px;
+    top: myrem(122);
+    right: myrem(-232);
 }
 
 .p-stay__body-wrap {
@@ -40,16 +40,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 793px;
-    height: 191px;
+    width: myrem(793);
+    height: myrem(191);
 }
 
 .p-stay__cloud2 {
     position: absolute;
-    bottom: 30px;
+    bottom: myrem(30);
     right: 0;
-    width: 360px;
-    height: 360px;
+    width: myrem(360);
+    height: myrem(360);
 }
 
 .p-stay__title {
@@ -60,7 +60,7 @@
     line-height: 1;
     letter-spacing: .04em;
     padding-left: myrem(4);
-    margin-bottom: 47px;
+    margin-bottom: myrem(47);
 }
 
 .p-stay__text-wrap {
@@ -68,8 +68,8 @@
     flex-direction: row-reverse;
     justify-content: center;
     margin: 0 auto;
-    gap: 30px;
-    padding-right: 2.5px;
+    gap: myrem(30);
+    padding-right: myrem(2.5);
 }
 
 .p-stay__text {
@@ -80,7 +80,7 @@
     writing-mode: vertical-rl;
     line-height: calc(18/15);
     letter-spacing: .202em;
-    gap: 14px;
+    gap: myrem(14);
 }
 
 .p-stay__text span {
@@ -89,13 +89,17 @@
 
 .p-stay__gallery {
     width: 100%;
-    height: 300px;
+    height: myrem(300);
     background-image: url(../../images/stay-slider.png);
-    background-size: 2482px 300px;
+    background-size: myrem(2482) myrem(300);
     background-repeat: repeat-x;
     padding-left: 20px;
-    background-position: -167px center;
+    background-position: myrem(-167) center;
+
+
     // animation: bgscroll 100s linear infinite;
+
+
 }
 
 @-webkit-keyframes bgscroll {
