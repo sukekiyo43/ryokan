@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-guidance {
-    width: myrem(320);
+    width: myrem(272);
 }
 
 .c-guidance__text {
@@ -12,7 +12,13 @@
     margin-bottom: myrem(79);
 }
 
+.c-guidance__btn-wrap {
+    width: 100%;
+    max-width: myrem(272);
+}
+
 .c-guidance__btn {
+    width: 100%;
     display: inline-block;
     background-color: $text;
     border: solid 1px $text;
@@ -20,11 +26,12 @@
 }
 
 .c-guidance__btn-core {
+    width: 100%;
+    text-align: center;
     font-size: myrem(15);
     font-family: $font-main;
     display: inline-block;
-    // padding: 21px 87px 18px 89px;
-    padding: myrem(21) myrem(87) myrem(18) myrem(89);
+    padding: myrem(21) myrem(10) myrem(18) myrem(12);
     background-color: $white;
     letter-spacing: 0.04em;
     line-height: calc(22.5/15);

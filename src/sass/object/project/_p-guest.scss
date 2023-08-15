@@ -1,21 +1,23 @@
 @use "global" as *;
 
-
 .p-guest__inner {
     position: relative;
+    padding-top: myrem(195);
+    padding-bottom: myrem(80);
 }
 
 .p-guest__cloud {
     position: absolute;
-    bottom: myrem(-229);
+    bottom: myrem(-149);
     left: 0;
     width: myrem(337);
     height: myrem(311);
+    z-index: -1;
 }
 
 .p-guest__body {
     position: relative;
-    max-width: 1440px;
+    max-width: myrem(1440);
     margin: 0 auto;
 }
 
@@ -34,14 +36,18 @@
     margin-bottom: myrem(-59)
 }
 
-.p-guest__body-wrap {
+.p-guest__body-inner {
     display: flex;
-    justify-content: flex-end;
-
 }
 
 .p-guest__guidance {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    max-width: myrem(720);
     margin: myrem(113) auto 0;
+    padding-right: clamp(0rem, -11rem + 16vw, 3rem);
+    padding-bottom: myrem(86);
 }
 
 .p-guest__img {

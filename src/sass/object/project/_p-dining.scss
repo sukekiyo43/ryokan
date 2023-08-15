@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.p-dining__inner {
+    padding-top: myrem(75);
+    padding-bottom: myrem(160);
+    position: relative;
+    overflow: hidden;
+}
+
+.p-dining__cloud {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: myrem(635);
+    height: myrem(191);
+}
+
+.p-dining__body {
+    position: relative;
+    max-width: myrem(1440);
+    margin: 0 auto;
+}
+
+.p-dining__body::after {
+    position: absolute;
+    content: '';
+    width: myrem(264);
+    height: myrem(69);
+    background: url(../images/dining-sub-cloud.png) no-repeat center center/cover;
+    top: myrem(-75);
+    right: myrem(-85);
+}
+
+.p-dining__title {
+    width: fit-content;
+    margin: 0 auto;
+    transform: translateX(181px);
+    margin-bottom: myrem(-59);
+}
+
+.p-dining__body-inner {
+    display: flex;
+}
+
+.p-dining__guidance {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    max-width: myrem(720);
+    margin: myrem(113) auto 0;
+    padding-right: clamp(0rem, -78rem + 104vw, 13rem);
+    padding-bottom: myrem(86);
+}
+
+.p-dining__img {
+    width: 100%;
+    max-width: myrem(720);
+    max-height: myrem(502);
+}
