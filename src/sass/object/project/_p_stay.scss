@@ -99,11 +99,7 @@
     background-repeat: repeat-x;
     padding-left: 20px;
     background-position: myrem(-167) center;
-
-
-    // animation: bgscroll 100s linear infinite;
-
-
+    animation: bgscroll 100s linear infinite;
 }
 
 @-webkit-keyframes bgscroll {
@@ -112,6 +108,6 @@
     }
 
     100% {
-        background-position: 100vw 0;
+        background-position: -100vw 0;
     }
 }

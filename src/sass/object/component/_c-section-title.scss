@@ -22,3 +22,11 @@
     letter-spacing: .2em;
     writing-mode: vertical-rl;
 }
+
+.c-section-title--white {
+    color: rgba(255, 255, 255, .2);
+}
+
+.c-section-title--white::before {
+    color: $white;
+}

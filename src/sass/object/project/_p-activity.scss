@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.p-activity {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/activity-bg.jpg) no-repeat center/cover;
+}
+
+.p-activity__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: myrem(180);
+    padding-bottom: myrem(160);
+    width: 100%;
+    max-width: myrem(1199);
+}
+
+.p-activity__body {
+    position: relative;
+}
+
+.p-activity__title {
+    position: absolute;
+    top: myrem(-25);
+    left: clamp(-0.0625rem, 26.2946rem + -29.2857vw, 2.5rem);
+}
+
+.p-activity__guidance {
+    padding-top: myrem(189);
+    padding-left: myrem(79);
+}
+
+.p-activity__img {
+    max-width: myrem(640);
+    max-height: myrem(432);
+}
