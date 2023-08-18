@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.p-gallery__inner {
+    padding: myrem(155) 0 myrem(160);
+}
+
+.p-gallery__head {
+    position: relative;
+    display: flex;
+    max-width: myrem(1250);
+    padding: 0 myrem(22) 0 myrem(25);
+    margin: 0 auto myrem(53);
+    gap: myrem(20);
+    justify-content: space-between;
+    align-items: end;
+}
+
+.p-gallery__head::before {
+    position: absolute;
+    content: '';
+    width: myrem(264);
+    height: myrem(69);
+    background: url(../images/gallery-sub-cloud1.png) no-repeat center/cover;
+    top: myrem(-80);
+    right: myrem(59);
+}
+
+.p-gallery__head::after {
+    position: absolute;
+    content: '';
+    width: myrem(237);
+    height: myrem(66);
+    background: url(../images/gallery-sub-cloud2.png) no-repeat center/cover;
+    bottom: myrem(-486);
+    left: myrem(64);
+
+}
+
+.p-gallery__btn {
+    margin-bottom: myrem(-6);
+}
+
+.p-gallery__body {
+    min-height: myrem(320);
+    background-image: url(../images/gallery.png);
+    background-repeat: repeat-x;
+    background-size: myrem(1984) myrem(320);
+    background-position: myrem(-32) 0;
+    // animation: bgscroll 100s linear infinite;
+}
+
+@-webkit-keyframes bgscroll {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -100vw 0;
+    }
+}

@@ -23,10 +23,14 @@
     writing-mode: vertical-rl;
 }
 
-.c-section-title--white {
+.c-section-title--activity {
     color: rgba(255, 255, 255, .2);
 }
 
-.c-section-title--white::before {
+.c-section-title--activity::before {
+    color: $white;
+}
+
+.c-section-title--news {
     color: $white;
 }

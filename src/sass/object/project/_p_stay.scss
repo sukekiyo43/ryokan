@@ -48,7 +48,7 @@
 .p-stay__cloud2 {
     position: absolute;
     bottom: myrem(30);
-    right: 0;
+    right: clamp(-7.8125rem, -33.5506rem + 38.3436vw, 0rem);
     width: myrem(360);
     height: myrem(360);
     z-index: -1;
@@ -88,7 +88,6 @@
 .p-stay__text span {
     height: fit-content;
     display: inline-block;
-    background-color: rgba(255, 255, 255, .5);
 }
 
 .p-stay__gallery {
@@ -97,7 +96,7 @@
     background-image: url(../../images/stay-slider.png);
     background-size: myrem(2482) myrem(300);
     background-repeat: repeat-x;
-    padding-left: 20px;
+    padding-left: myrem(20);
     background-position: myrem(-167) center;
     animation: bgscroll 100s linear infinite;
 }

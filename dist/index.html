@@ -198,7 +198,7 @@
     <section class="p-activity">
       <div class="p-activity__inner">
         <div class="p-activity__body">
-          <h2 class="p-activity__title c-section-title c-section-title--white" date-ja="体験">Activity</h2>
+          <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
           <div class="p-activity__guidance">
             <div class="c-guidance c-guidance--wide">
               <p class="c-guidance__text c-guidance__text--white">
@@ -312,21 +312,49 @@
 
     <section class="p-news">
       <div class="p-news__inner">
-        <div class="p-news__title">
-          <h2 date-ja="お知らせ">News</h2>
-          <button class="c-card__btn">
-            <a class="c-btn3" href="">一覧を見る</a>
+        <div class="p-news__title-box">
+          <h2 class="p-news__title c-section-title c-section-title--news" date-ja="お知らせ">News</h2>
+          <button class="c-btn2">
+            <a class="c-btn2__core" href="">
+              一覧を見る
+              <div class="c-btn2__img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                    fill="#222222" />
+                </svg>
+              </div>
+            </a>
           </button>
         </div>
         <div class="p-news__body">
           <ul class="p-news__items">
             <li class="p-news__item">
-              <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
-              <p class="p-news__text">コーポレートサイトリニューアルのお知らせ</p>
+              <a class="p-news__item-body" href="">
+                <div class="p-news__text-box">
+                  <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
+                  <p class="p-news__text">
+                    コーポレートサイトリニューアルのお知らせ
+                  </p>
+                </div>
+                <div class="p-news__img">
+                  <img src="./images/news1.jpg" alt="ニュースの画像1">
+                </div>
+              </a>
             </li>
             <li class="p-news__item">
-              <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
-              <p class="p-news__text">コーポレートサイトリニューアルのお知らせ</p>
+              <a class="p-news__item-body" href="">
+                <div class="p-news__text-box">
+                  <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
+                  <p class="p-news__text">
+                    2023.9.10臨時休業のお知らせ
+                  </p>
+                </div>
+                <div class="p-news__img">
+                  <img src="./images/news2.jpg" alt="ニュースの画像2">
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -334,14 +362,24 @@
     </section>
 
     <section class="p-gallery">
-      <div class="p-gallery__head">
-        <h2 date-ja="ギャラリー">Gallery</h2>
-        <button class="c-card__btn">
-          <a class="c-btn3" href="">一覧を見る</a>
-        </button>
-      </div>
-      <div class="p-gallery__body">
-        <img src="" alt="">
+      <div class="p-gallery__inner">
+        <div class="p-gallery__head">
+          <h2 class="p-gallery__title c-section-title" date-ja="ギャラリー">Gallery</h2>
+          <button class="p-gallery__btn c-btn2">
+            <a class="c-btn2__core" href="">
+              一覧を見る
+              <div class="c-btn2__img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                    fill="#222222" />
+                </svg>
+              </div>
+            </a>
+          </button>
+        </div>
+        <div class="p-gallery__body"></div>
       </div>
     </section>
 
