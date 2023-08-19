@@ -46,7 +46,7 @@
     background-repeat: repeat-x;
     background-size: myrem(1984) myrem(320);
     background-position: myrem(-32) 0;
-    // animation: bgscroll 100s linear infinite;
+    animation: bgscroll 100s linear infinite;
 }
 
 @-webkit-keyframes bgscroll {
