@@ -196,6 +196,10 @@
     </section>
 
     <section class="p-activity">
+      <picture class="p-activity__bg-box">
+        <source class="so" srcset="./images/activity-bg1440.jpg" media="(max-width: 1440px)">
+        <img src="./images/activity-bg1920.jpg" alt="">
+      </picture>
       <div class="p-activity__inner">
         <div class="p-activity__body">
           <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
@@ -383,13 +387,19 @@
       </div>
     </section>
 
-    <section class="p-reservation">
+    <section class="p-reservation l-reservation">
       <div class="p-reservation__inner">
-        <div class="p-reservation__tel">
-          <p class="p-reservation__text">ご予約はこちら</p>
-          <p class="p-reservation__number">Tel. 022-1234-5678</p>
+        <picture class="p-reservation__bg-box">
+          <source class="so" srcset="./images/reservation-bg1440.jpg" media="(max-width: 1440px)">
+          <img src="./images/reservation-bg1920.jpg" alt="">
+        </picture>
+        <div class="p-reservation__text-wrap">
+          <div class="p-reservation__tel">
+            <p class="p-reservation__text">ご予約はこちら</p>
+            <p class="p-reservation__number"><span class="p-reservation__text">Tel. </span>022-1234-5678</p>
+          </div>
+          <h2 class="p-reservation__title c-section-title c-section-title--reservation">Reservation</h2>
         </div>
-        <h2>Reservation</h2>
       </div>
     </section>
 

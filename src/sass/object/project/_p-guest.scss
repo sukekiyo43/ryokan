@@ -32,7 +32,7 @@
 }
 
 .p-guest__title {
-    margin-left: myrem(120);
+    margin-left: clamp(1.5625rem, -53.5714rem + 67.8571vw, 7.5rem);
     margin-bottom: myrem(-59)
 }
 
