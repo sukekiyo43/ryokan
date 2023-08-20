@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-dining__inner {
-    padding-top: myrem(75);
+    padding-top: myrem(176);
     padding-bottom: myrem(160);
     position: relative;
     overflow: hidden;
@@ -27,15 +27,14 @@
     width: myrem(264);
     height: myrem(69);
     background: url(../images/dining-sub-cloud.png) no-repeat center center/cover;
-    top: myrem(-75);
+    top: myrem(-176);
     right: myrem(-85);
 }
 
 .p-dining__title {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: clamp(1.5625rem, -85.3125rem + 115.8333vw, 18.9375rem);
-    margin-bottom: myrem(-59);
+    position: absolute;
+    top: myrem(-214);
+    right: 0;
 }
 
 .p-dining__body-inner {
@@ -43,13 +42,17 @@
 }
 
 .p-dining__guidance {
+    position: relative;
     display: flex;
     justify-content: center;
+    max-width: myrem(511);
     width: 50%;
-    max-width: myrem(720);
-    margin: myrem(113) auto 0;
-    padding-right: clamp(0rem, -78rem + 104vw, 13rem);
-    padding-bottom: myrem(86);
+    padding: myrem(113) 0 myrem(86);
+}
+
+.p-dining__guidance-wrap {
+    position: relative;
+    padding: 0 myrem(25);
 }
 
 .p-dining__img {

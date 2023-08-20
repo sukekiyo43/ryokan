@@ -130,9 +130,9 @@
     <section class="p-guest">
       <div class="p-guest__inner">
         <div class="p-guest__body">
-          <h2 class="p-guest__title c-section-title" date-ja="客室案内">Guest Room</h2>
-          <div class="p-guest__body-inner">
-            <div class="p-guest__guidance">
+          <div class="p-guest__guidance">
+            <div class="p-guest__guidance-wrap">
+              <h2 class="p-guest__title c-section-title" date-ja="客室案内">Guest Room</h2>
               <div class="c-guidance">
                 <p class="c-guidance__text">
                   大正時代の美意識を現代に伝える<br>
@@ -150,9 +150,9 @@
                 </button>
               </div>
             </div>
-            <div class="p-guest__img">
-              <img src="./images/guest.jpg" alt="客室案内の画像">
-            </div>
+          </div>
+          <div class="p-guest__img">
+            <img src="./images/guest.jpg" alt="客室案内の画像">
           </div>
         </div>
         <div class="p-guest__cloud">
@@ -164,27 +164,29 @@
     <section class="p-dining">
       <div class="p-dining__inner">
         <div class="p-dining__body">
-          <h2 class="p-dining__title c-section-title" date-ja="お食事">Dining</h2>
           <div class="p-dining__body-inner">
             <div class="p-dining__img">
               <img src="./images/dining.jpg" alt="diningの画像">
             </div>
             <div class="p-dining__guidance">
-              <div class="c-guidance">
-                <p class="c-guidance__text">
-                  近海で採れる海の幸をはじめ、<br>
-                  専任のシェフが厳選した<br>
-                  最上級の旬素材を<br>
-                  取り寄せてお届けする<br>
-                  フルコースをご堪能ください。
-                </p>
-                <button class="c-guidance__btn-wrap">
-                  <a class="c-guidance__btn" href="">
-                    <span class="c-guidance__btn-core">
-                      お食事について
-                    </span>
-                  </a>
-                </button>
+              <div class="p-dining__guidance-wrap">
+                <h2 class="p-dining__title c-section-title" date-ja="お食事">Dining</h2>
+                <div class="c-guidance">
+                  <p class="c-guidance__text">
+                    近海で採れる海の幸をはじめ、<br>
+                    専任のシェフが厳選した<br>
+                    最上級の旬素材を<br>
+                    取り寄せてお届けする<br>
+                    フルコースをご堪能ください。
+                  </p>
+                  <button class="c-guidance__btn-wrap">
+                    <a class="c-guidance__btn" href="">
+                      <span class="c-guidance__btn-core">
+                        お食事について
+                      </span>
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -196,32 +198,34 @@
     </section>
 
     <section class="p-activity">
-      <picture class="p-activity__bg-box">
-        <source class="so" srcset="./images/activity-bg1440.jpg" media="(max-width: 1440px)">
-        <img src="./images/activity-bg1920.jpg" alt="">
-      </picture>
       <div class="p-activity__inner">
-        <div class="p-activity__body">
-          <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
-          <div class="p-activity__guidance">
-            <div class="c-guidance c-guidance--wide">
-              <p class="c-guidance__text c-guidance__text--white">
-                地域の伝統的な文化や工芸品づくり、<br>
-                地元料理の試食など、<br>
-                地元ならではの体験をお楽しみください。
-              </p>
-              <button class="c-guidance__btn-wrap">
-                <a class="c-guidance__btn c-guidance__btn--white" href="">
-                  <span class="c-guidance__btn-core c-guidance__btn-core--white">
-                    詳しく見る
-                  </span>
-                </a>
-              </button>
+        <picture class="p-activity__bg-box">
+          <source class="so" srcset="./images/activity-bg1440.jpg" media="(max-width: 1440px)">
+          <img src="./images/activity-bg1920.jpg" alt="">
+        </picture>
+        <div class="p-activity__item-wrap">
+          <div class="p-activity__body">
+            <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+            <div class="p-activity__guidance">
+              <div class="c-guidance c-guidance--wide">
+                <p class="c-guidance__text c-guidance__text--white">
+                  地域の伝統的な文化や工芸品づくり、<br>
+                  地元料理の試食など、<br>
+                  地元ならではの体験をお楽しみください。
+                </p>
+                <button class="c-guidance__btn-wrap">
+                  <a class="c-guidance__btn c-guidance__btn--white" href="">
+                    <span class="c-guidance__btn-core c-guidance__btn-core--white">
+                      詳しく見る
+                    </span>
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="p-activity__img">
-          <img src="./images/activity.jpg" alt="activityの画像">
+          <div class="p-activity__img">
+            <img src="./images/activity.jpg" alt="activityの画像">
+          </div>
         </div>
       </div>
     </section>
