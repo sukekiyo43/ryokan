@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.c-guidance {
+    width: myrem(272);
+}
+
+.c-guidance__text {
+    font-size: myrem(15);
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: .04em;
+    margin-bottom: myrem(79);
+}
+
+.c-guidance__btn-wrap {
+    width: 100%;
+    max-width: myrem(272);
+}
+
+.c-guidance__btn {
+    width: 100%;
+    display: inline-block;
+    background-color: $text;
+    border: solid 1px $text;
+    transition: .3s;
+}
+
+.c-guidance__btn-core {
+    width: 100%;
+    text-align: center;
+    font-size: myrem(15);
+    font-family: $font-main;
+    display: inline-block;
+    padding: myrem(21) myrem(10) myrem(18) myrem(12);
+    background-color: $white;
+    letter-spacing: 0.04em;
+    line-height: calc(22.5/15);
+    border-radius: myrem(10);
+    transition: .3s;
+}
+
+.c-guidance__btn-wrap:hover,
+.c-guidance__btn-wrap:hover .c-guidance__btn {
+    @include mq(md) {
+        opacity: 1;
+    }
+}
+
+.c-guidance__btn-wrap:hover .c-guidance__btn-core {
+    @include mq(md) {
+        background-color: $text;
+        color: $white;
+    }
+}
+
+.c-guidance--wide {
+    width: myrem(300);
+}
+
+.c-guidance__text--white {
+    color: $white;
+}
+
+.c-guidance__btn--white {
+    position: relative;
+    background-color: transparent;
+    border: solid 1px $white;
+    background: url(../images/btn--white-bg.svg) no-repeat center;
+}
+
+.c-guidance__btn-core--white {
+    background-color: transparent;
+    color: $white;
+}
+
+.c-guidance__btn-wrap:hover .c-guidance__btn-core--white {
+    background-color: $white ;
+    color: $text;
+}
+
+.c-guidance__btn-wrap:hover .c-guidance__btn--white {
+    background-color: $white;
+}

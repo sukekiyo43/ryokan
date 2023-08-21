@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.p-reservation {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.p-reservation__inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.p-reservation__bg-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.p-reservation__bg-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-reservation__text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: myrem(451);
+    max-width: myrem(1440);
+    padding-left: myrem(25);
+    margin: 0 auto;
+}
+
+.p-reservation__tel {
+    margin-left: myrem(175);
+    margin-bottom: myrem(85);
+}
+
+.p-reservation__text {
+    font-size: myrem(24);
+    font-weight: 400;
+    line-height: calc(38.4/24);
+    letter-spacing: .04em;
+    color: $white;
+    margin-bottom: myrem(16);
+}
+
+.p-reservation__number {
+    font-size: myrem(40);
+    font-weight: 400;
+    line-height: calc(64/40);
+    letter-spacing: .04em;
+    color: $white;
+}
+
+.p-reservation__title {
+    margin-left: auto;
+    margin-right: clamp(-0.3125rem, -22.8125rem + 25vw, 7.1875rem);
+    margin-bottom: 1px;
+    line-height: .5;
+}

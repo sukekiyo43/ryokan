@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.p-header {
+    background-color: $text;
+}
+
+.p-header__wrap {
+    position: relative;
+    display: flex;
+    max-width: myrem(1920);
+    padding: 0 myrem(80);
+    margin: 0 auto;
+    justify-content: flex-end;
+    padding-top: myrem(24);
+    padding-bottom: myrem(21);
+}
+
+.p-header__logo {
+    position: absolute;
+    top: myrem(24);
+    left: clamp(2.1875rem, -8.125rem + 15vw, 5rem);
+    width: myrem(157);
+    height: myrem(137);
+    z-index: 10;
+}
+
+.p-header__mv {
+    max-width: myrem(1920);
+    margin: 0 auto;
+    padding-left: myrem(100);
+}

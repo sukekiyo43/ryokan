@@ -1,0 +1,44 @@
+@use "global" as *;
+
+
+.c-btn2:hover {
+    opacity: 1;
+}
+
+.c-btn2__core {
+    position: relative;
+    display: inline-block;
+    font-size: myrem(15);
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: calc(24/15);
+    padding: myrem(5) myrem(69) myrem(5) 0;
+    max-width: myrem(147);
+}
+
+.c-btn2:hover,
+.c-btn2__core:hover {
+    opacity: 1;
+}
+
+.c-btn2__img {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    margin-top: 2px;
+}
+
+.c-btn2,
+.c-btn2__img path,
+.c-btn2__img circle {
+    transition: .3s;
+}
+
+.c-btn2__core:hover .c-btn2__img path {
+    fill: $white;
+}
+
+.c-btn2__core:hover .c-btn2__img circle {
+    fill: $text;
+}

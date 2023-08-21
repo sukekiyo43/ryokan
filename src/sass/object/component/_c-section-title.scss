@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.c-section-title {
+    position: relative;
+    font-size: myrem(160);
+    font-family: $font-title;
+    color: $text_en;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1;
+}
+
+.c-section-title::before {
+    font-family: $font-main;
+    top: myrem(8);
+    left: myrem(117);
+    position: absolute;
+    content: attr(date-ja);
+    font-size: myrem(20);
+    color: $text;
+    line-height: calc(24/20);
+    letter-spacing: .2em;
+    writing-mode: vertical-rl;
+}
+
+.c-section-title--activity {
+    color: rgba(255, 255, 255, .2);
+}
+
+.c-section-title--activity::before {
+    color: $white;
+}
+
+.c-section-title--news {
+    color: $white;
+}
+
+.c-section-title--reservation {
+    color: rgba(255, 255, 255, 0.6);
+}

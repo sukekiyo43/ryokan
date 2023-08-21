@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.c-sns {
+    display: flex;
+    align-items: center;
+    gap: myrem(16);
+}
+
+.c-sns__img {
+    max-width: myrem(22);
+    max-height: myrem(22);
+    object-fit: cover;
+}

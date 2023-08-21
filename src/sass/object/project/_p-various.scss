@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-various {
+    overflow: hidden;
+}
+
+.p-various__inner {
+    position: relative;
+    padding: myrem(171) myrem(25) myrem(159);
+}
+
+.p-various__cloud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: myrem(476);
+    max-height: myrem(190);
+}
+
+.p-various__cards {
+    position: relative;
+    display: flex;
+    max-width: myrem(1260);
+    gap: clamp(1.25rem, -3.7917rem + 7.3333vw, 2.625rem);
+    margin: 0 auto;
+}
+
+.p-various__cards::after {
+    position: absolute;
+    content: '';
+    bottom: myrem(-49);
+    right: myrem(-138);
+    width: myrem(264);
+    height: myrem(69);
+    background: url(../images/various-sub-cloud.png) no-repeat center/cover;
+}
+
+.p-various__card {
+    max-width: myrem(382);
+}
+
+.p-various__card:nth-child(2) {
+    margin-top: myrem(50);
+}
