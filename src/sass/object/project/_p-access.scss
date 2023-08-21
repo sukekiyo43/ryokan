@@ -3,14 +3,15 @@
 .p-access__inner {
     display: flex;
     max-width: myrem(1440);
-    padding-left: myrem(25);
     margin: 0 auto;
     gap: myrem(30);
-    padding-top: myrem(181);
+    padding: myrem(181) 0 myrem(159) myrem(25);
 }
 
 .p-access__body {
     margin-left: auto;
+    width: 50%;
+    max-width: myrem(450)
 }
 
 .p-access__title {

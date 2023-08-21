@@ -34,7 +34,7 @@
 .p-guest__title {
     position: absolute;
     top: myrem(-214);
-    left: -13px;
+    left: myrem(-13);
     min-width: myrem(835);
 }
 
@@ -51,7 +51,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    max-width: 478px;
+    max-width: myrem(478);
     width: 100%;
 }
 

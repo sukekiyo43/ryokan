@@ -5,8 +5,6 @@
     color: $white;
 }
 
-.p-menu__item {}
-
 .p-menu__item-core {
     display: flex;
     justify-content: center;
@@ -69,4 +67,17 @@
 
 .p-menu__btn {
     margin-left: myrem(14.5);
+}
+
+.p-menu__items--footer {
+    flex-direction: column;
+    margin-right: -1px;
+}
+
+.p-menu__item-core--footer {
+    padding: myrem(9) myrem(16);
+}
+
+.p-menu__btn--footer {
+    margin-top: myrem(17);
 }
