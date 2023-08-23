@@ -26,7 +26,6 @@
     top: myrem(10);
     left: myrem(20);
     z-index: 30;
-    transition: .3s;
 
     @include mq(md) {
         top: myrem(24);
@@ -37,7 +36,17 @@
 }
 
 .p-header__logo.open {
-    background-color: $text;
+    animation: logobg .5s linear forwards;
+}
+
+@keyframes logobg {
+    from {
+        background-color: rgba(34, 34, 34, 0)
+    }
+
+    to {
+        background-color: rgba(34, 34, 34, 1)
+    }
 }
 
 .p-header__menu {
