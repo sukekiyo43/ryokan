@@ -1,18 +1,28 @@
 @use "global" as *;
 
 .p-dining__inner {
-    padding-top: myrem(176);
-    padding-bottom: myrem(160);
     position: relative;
     overflow: hidden;
+    padding-top: myrem(200);
+    padding-bottom: myrem(160);
+
+    @include mq(md) {
+        padding-top: myrem(176);
+        padding-bottom: myrem(160);
+    }
 }
 
 .p-dining__cloud {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: myrem(635);
-    height: myrem(191);
+    width: myrem(450);
+    height: myrem(135);
+
+    @include mq(md) {
+        width: myrem(635);
+        height: myrem(191);
+    }
 }
 
 .p-dining__body {
@@ -24,17 +34,40 @@
 .p-dining__body::after {
     position: absolute;
     content: '';
-    width: myrem(264);
-    height: myrem(69);
     background: url(../images/dining-sub-cloud.png) no-repeat center center/cover;
-    top: myrem(-176);
-    right: myrem(-85);
+    width: myrem(220);
+    height: myrem(57);
+    top: myrem(-70);
+    right: myrem(-70);
+
+    @include mq(md) {
+        width: myrem(264);
+        height: myrem(69);
+        top: myrem(-176);
+        right: myrem(-85);
+    }
 }
 
 .p-dining__title {
-    position: absolute;
-    top: myrem(-214);
-    right: 0;
+    display: flex;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/dining.jpg) no-repeat center center/cover;
+    text-align: center;
+    padding: myrem(100) 0px;
+    width: 100%;
+    margin-bottom: myrem(20);
+
+    @include mq(md) {
+        width: fit-content;
+        display: block;
+        background: initial;
+        padding: 0;
+        position: absolute;
+        top: myrem(-214);
+        right: 0;
+        margin-bottom: 0;
+    }
 }
 
 .p-dining__body-inner {
@@ -45,18 +78,36 @@
     position: relative;
     display: flex;
     justify-content: center;
-    max-width: myrem(511);
-    width: 50%;
-    padding: myrem(113) 0 myrem(86);
+    width: 100%;
+
+    @include mq(md) {
+        padding: myrem(113) 0 myrem(86);
+        width: 50%;
+        max-width: myrem(511);
+    }
 }
 
 .p-dining__guidance-wrap {
     position: relative;
-    padding: 0 myrem(25);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(md) {
+        width: auto;
+        display: block;
+        padding: 0 myrem(25);
+    }
 }
 
 .p-dining__img {
-    width: 100%;
-    max-width: myrem(720);
-    max-height: myrem(502);
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        width: 100%;
+        max-width: myrem(720);
+        max-height: myrem(502);
+    }
 }

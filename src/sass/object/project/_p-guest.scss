@@ -3,7 +3,7 @@
 .p-guest__inner {
     position: relative;
     padding-top: myrem(150);
-    padding-bottom: myrem(50);
+    padding-bottom: myrem(70);
 
     @include mq(md) {
         padding: myrem(296) 0 myrem(80) myrem(25);
