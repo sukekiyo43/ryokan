@@ -33,25 +33,32 @@
   <script defer src="./js/script.js"></script>
 </head>
 
-<body>
+<body class="js-body">
   <header class="p-header">
     <div class="p-header__wrap">
-      <h1 class="p-header__logo">
+      <h1 class="p-header__logo js-logo">
         <a href="index.html">
           <img src="./images/header-logo.svg" alt="ヘッダーロゴ">
         </a>
       </h1>
-      <nav class="p-header__menu p-menu">
-        <ul class="p-menu__items">
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>ここめいとについて</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>宿泊</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お食事</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>体験</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>アクセス</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お問い合わせ</span></a></li>
-          <li class="p-menu__btn"><a class="c-btn1" href="">ご予約はこちら</a></li>
-        </ul>
+      <nav class="p-header__menu p-menu js-menu">
+        <div class="p-menu__inner">
+          <ul class="p-menu__items">
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>ここめいとについて</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>宿泊</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お食事</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>体験</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>アクセス</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お問い合わせ</span></a></li>
+            <li class="p-menu__btn"><a class="c-btn1" href="">ご予約はこちら</a></li>
+          </ul>
+        </div>
       </nav>
+      <button class="p-header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
     <div class="p-mv p-header__mv">
       <div class="p-mv__wrap">
@@ -69,14 +76,24 @@
             大切な人と過ごす場所、<br>ここめいと。
           </p>
         </div>
-        <div class="p-mv__pagination">
-          <div class="p-mv__pagination-numbers">
-            <span class="p-mv__pagination-1">1</span>
-            <span class="p-mv__pagination-2">2</span>
-            <span class="p-mv__pagination-3">3</span>
+        <div class="p-mv__bottom">
+          <div class="p-mv__sns-sp c-sns">
+            <a href="" class="c-sns__img">
+              <img src="./images/instagram.svg" alt="Instagramのアイコン">
+            </a>
+            <a href="" class="c-sns__img">
+              <img src="./images/twitter.svg" alt="Twitterのアイコン">
+            </a>
           </div>
-          <div class="p-mv__pagination-line"></div>
-          <div class="p-mv__pagination-number3">3</div>
+          <div class="p-mv__pagination">
+            <div class="p-mv__pagination-numbers">
+              <span class="p-mv__pagination-1">1</span>
+              <span class="p-mv__pagination-2">2</span>
+              <span class="p-mv__pagination-3">3</span>
+            </div>
+            <div class="p-mv__pagination-line"></div>
+            <div class="p-mv__pagination-number3">3</div>
+          </div>
         </div>
       </div>
       <div class="p-mv__sns">
@@ -86,7 +103,7 @@
     </div>
   </header>
 
-  <main>
+  <!-- <main>
     <section class="p-stay">
       <div class="p-stay__body-wrap">
         <div class="p-stay__body">
@@ -445,9 +462,9 @@
         </div>
       </div>
     </section>
-  </main>
+  </main> -->
 
-  <footer class="p-footer">
+  <!-- <footer class="p-footer">
     <div class="p-footer__inner">
       <a href="index.html" class="p-footer__logo">
         <img src="./images/footer-logo.svg" alt="フッターロゴ">
@@ -487,7 +504,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

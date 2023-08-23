@@ -1,6 +1,6 @@
 
 jQuery(function ($) {
-  
+
   // ページトップボタン
   var topBtn = $('.js-pagetop');
   topBtn.hide();
@@ -36,3 +36,39 @@ jQuery(function ($) {
   });
 
 });
+
+
+// スクロール時、要素をフェードで表示
+$(function () {
+  $(".js-fadeUp").on("inview", function () {
+    $(this).addClass("is-inview");
+  });
+});
+
+
+
+// ハンバーガーメニュー開閉
+$('.js-hamburger').on('click', function () {
+  $('.js-menu').fadeToggle();
+  $(this).toggleClass('open');
+  $('.js-body').toggleClass('open');
+  $('.js-logo').toggleClass('open');
+});
+
+let resizeTimer;
+
+function checkWidth() {
+  if ($(window).outerWidth(true) >= 768) {
+    $('.js-hamburger').removeClass('open');
+    $('.js-menu').removeAttr('style');
+    $('.js-body').removeClass('open');
+    $('.js-logo').removeClass('open');
+  }
+}
+
+$(window).on('resize', function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(checkWidth, 100);
+});
+
+$(window).on('load', checkWidth);
