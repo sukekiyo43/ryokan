@@ -2,25 +2,39 @@
 
 .c-section-title {
     position: relative;
-    font-size: myrem(160);
     font-family: $font-title;
     color: $text_en;
     font-weight: 400;
     letter-spacing: .04em;
     line-height: 1;
+    font-size: clamp(3.125rem, 0.7334rem + 10.2041vw, 5.625rem);
+    width: fit-content;
+
+    @include mq(md) {
+        font-size: myrem(160);
+    }
 }
 
 .c-section-title::before {
-    font-family: $font-main;
-    top: myrem(8);
-    left: myrem(117);
     position: absolute;
+    font-family: $font-main;
     content: attr(date-ja);
-    font-size: myrem(20);
-    color: $text;
     line-height: calc(24/20);
     letter-spacing: .2em;
-    writing-mode: vertical-rl;
+    font-size: clamp(0.875rem, 0.7554rem + 0.5102vw, 1rem);
+    color: $white;
+    top: myrem(-15);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(md) {
+        transform: initial;
+        writing-mode: vertical-rl;
+        color: $text;
+        top: myrem(8);
+        left: myrem(117);
+        font-size: myrem(20);
+    }
 }
 
 .c-section-title--activity {
