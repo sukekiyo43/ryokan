@@ -11,11 +11,16 @@
 .p-activity__item-wrap {
     display: flex;
     margin: 0 auto;
-    padding-top: myrem(180);
-    padding-bottom: myrem(160);
     width: 100%;
-    max-width: myrem(1248);
+    padding: 80px 0;
+    // padding-top: 50px;
+    // padding-bottom: 80px;
 
+    @include mq(md) {
+        padding-top: myrem(180);
+        padding-bottom: myrem(160);
+        max-width: myrem(1248);
+    }
 }
 
 .p-activity__bg-box {
@@ -35,26 +40,56 @@
 
 .p-activity__body {
     position: relative;
-    width: 50%;
-    max-width: myrem(584);
-    padding-left: myrem(25);
-    padding-right: myrem(25);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(md) {
+        align-items: initial;
+        width: 50%;
+        max-width: myrem(584);
+        padding-left: myrem(25);
+        padding-right: myrem(25);
+    }
 }
 
 .p-activity__title {
-    position: absolute;
-    top: myrem(-25);
-    left: myrem(24);
+    display: flex;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/activity.jpg) no-repeat center center/cover;
+    text-align: center;
+    padding: myrem(100) 0px;
+    width: 100%;
+    margin-bottom: myrem(20);
+
+    @include mq(md) {
+        margin-bottom: 0;
+        background: initial;
+        padding: 0;
+        width: auto;
+        position: absolute;
+        top: myrem(-25);
+        left: myrem(24);
+    }
 }
 
 .p-activity__guidance {
-    padding-top: myrem(189);
-    padding-left: clamp(3.4375rem, -4.8125rem + 12vw, 4.9375rem);
-    max-width: myrem(373);
+    @include mq(md) {
+        padding-top: myrem(189);
+        padding-left: clamp(3.4375rem, -4.8125rem + 12vw, 4.9375rem);
+        max-width: myrem(373);
+    }
 }
 
 .p-activity__img {
-    max-width: myrem(640);
-    max-height: myrem(432);
-    flex-shrink: 0;
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        max-width: myrem(640);
+        max-height: myrem(432);
+        flex-shrink: 0;
+    }
 }

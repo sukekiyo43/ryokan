@@ -75,7 +75,11 @@
 }
 
 .c-guidance--wide {
-    width: myrem(300);
+    width: myrem(250);
+
+    @include mq(md) {
+        width: myrem(300);
+    }
 }
 
 .c-guidance__text--white {

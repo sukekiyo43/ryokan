@@ -212,7 +212,7 @@
       </div>
     </section>
 
-    <!-- <section class="p-activity">
+    <section class="p-activity">
       <div class="p-activity__inner">
         <picture class="p-activity__bg-box">
           <source class="so" srcset="./images/activity-bg1440.jpg" media="(max-width: 1440px)">
@@ -220,12 +220,14 @@
         </picture>
         <div class="p-activity__item-wrap">
           <div class="p-activity__body">
-            <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+            <div class="p-activity__title">
+              <h2 class="c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+            </div>
             <div class="p-activity__guidance">
               <div class="c-guidance c-guidance--wide">
                 <p class="c-guidance__text c-guidance__text--white">
-                  地域の伝統的な文化や工芸品づくり、<br>
-                  地元料理の試食など、<br>
+                  地域の伝統的な文化や工芸品づくり、<br class="c-guidance__text-br">
+                  地元料理の試食など、<br class="c-guidance__text-br">
                   地元ならではの体験をお楽しみください。
                 </p>
                 <button class="c-guidance__btn-wrap">
@@ -243,95 +245,97 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="p-various">
+    <section class="p-various">
       <div class="p-various__inner">
-        <div class="p-various__cards">
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">History</p>
-              <p class="p-card__ja">歴史</p>
-              <div class="p-card__img">
-                <img src="./images/history.jpg" alt="歴史の画像">
+        <div class="p-various__inner-sp">
+          <div class="p-various__cards">
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">History</p>
+                <p class="p-card__ja">歴史</p>
+                <div class="p-card__img">
+                  <img src="./images/history.jpg" alt="歴史の画像">
+                </div>
+                <h3 class="p-card__title">歴史を学ぶ</h3>
+                <p class="p-card__text">
+                  街のいたるところに歴史を物語る建物や史跡が残されています。
+                </p>
+                <button class="p-card__btn c-btn2">
+                  <a class="c-btn2__core" href="">
+                    詳しく見る
+                    <div class="c-btn2__img">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                          fill="#222222" />
+                      </svg>
+                    </div>
+                  </a>
+                </button>
               </div>
-              <h3 class="p-card__title">歴史を学ぶ</h3>
-              <p class="p-card__text">
-                街のいたるところに歴史を物語る建物や史跡が残されています。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
-                  詳しく見る
-                  <div class="c-btn2__img">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <circle cx="17" cy="17" r="16.5" stroke="#222222" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
-                        fill="#222222" />
-                    </svg>
-                  </div>
-                </a>
-              </button>
+            </div>
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">Tourism</p>
+                <p class="p-card__ja">観光</p>
+                <div class="p-card__img">
+                  <img src="./images/tourism.jpg" alt="観光の画像">
+                </div>
+                <h3 class="p-card__title">自然に触れる</h3>
+                <p class="p-card__text">
+                  周辺には雄大な自然が織りなす絶景スポットも多数ございます。
+                </p>
+                <button class="p-card__btn c-btn2">
+                  <a class="c-btn2__core" href="">
+                    詳しく見る
+                    <div class="c-btn2__img">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                          fill="#222222" />
+                      </svg>
+                    </div>
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">Food</p>
+                <p class="p-card__ja">食</p>
+                <div class="p-card__img">
+                  <img src="./images/food.jpg" alt="食の画像">
+                </div>
+                <h3 class="p-card__title">食を堪能する</h3>
+                <p class="p-card__text">
+                  穏やかな気候で育ったフレッシュな野菜や果物を堪能できます。
+                </p>
+                <button class="p-card__btn c-btn2">
+                  <a class="c-btn2__core" href="">
+                    詳しく見る
+                    <div class="c-btn2__img">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                          fill="#222222" />
+                      </svg>
+                    </div>
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">Tourism</p>
-              <p class="p-card__ja">観光</p>
-              <div class="p-card__img">
-                <img src="./images/tourism.jpg" alt="観光の画像">
-              </div>
-              <h3 class="p-card__title">自然に触れる</h3>
-              <p class="p-card__text">
-                周辺には雄大な自然が織りなす絶景スポットも多数ございます。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
-                  詳しく見る
-                  <div class="c-btn2__img">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <circle cx="17" cy="17" r="16.5" stroke="#222222" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
-                        fill="#222222" />
-                    </svg>
-                  </div>
-                </a>
-              </button>
-            </div>
+          <div class="p-various__cloud">
+            <img src="./images/various-cloud.png" alt="variousの背景雲">
           </div>
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">Food</p>
-              <p class="p-card__ja">食</p>
-              <div class="p-card__img">
-                <img src="./images/food.jpg" alt="食の画像">
-              </div>
-              <h3 class="p-card__title">食を堪能する</h3>
-              <p class="p-card__text">
-                穏やかな気候で育ったフレッシュな野菜や果物を堪能できます。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
-                  詳しく見る
-                  <div class="c-btn2__img">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <circle cx="17" cy="17" r="16.5" stroke="#222222" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
-                        fill="#222222" />
-                    </svg>
-                  </div>
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="p-various__cloud">
-          <img src="./images/various-cloud.png" alt="variousの背景雲">
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section class="p-news">
       <div class="p-news__inner">

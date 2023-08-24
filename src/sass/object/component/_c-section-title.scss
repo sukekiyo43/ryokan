@@ -38,7 +38,11 @@
 }
 
 .c-section-title--activity {
-    color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .8);
+
+    @include mq(md) {
+        color: rgba(255, 255, 255, .2);
+    }
 }
 
 .c-section-title--activity::before {
