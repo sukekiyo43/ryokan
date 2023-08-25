@@ -22,7 +22,8 @@
     line-height: calc(24/20);
     letter-spacing: .2em;
     font-size: clamp(0.875rem, 0.7554rem + 0.5102vw, 1rem);
-    color: $white;
+    white-space: nowrap;
+    color: $text;
     top: myrem(-15);
     left: 50%;
     transform: translateX(-50%);
@@ -30,7 +31,6 @@
     @include mq(md) {
         transform: initial;
         writing-mode: vertical-rl;
-        color: $text;
         top: myrem(8);
         left: myrem(117);
         font-size: myrem(20);
@@ -55,4 +55,12 @@
 
 .c-section-title--reservation {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.c-section-title--sub-white::before {
+    color: $white;
+
+    @include mq(md) {
+        color: $text;
+    }
 }

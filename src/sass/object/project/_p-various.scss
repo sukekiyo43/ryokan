@@ -28,8 +28,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: myrem(320);
-    height: myrem(127);
+    max-width: myrem(320);
+    max-height: myrem(127);
 
     @include mq(md) {
         max-width: myrem(476);
@@ -71,7 +71,7 @@
 }
 
 .p-various__card {
-    max-width: 350px;
+    max-width: myrem(350);
 
     @include mq(md) {
         max-width: myrem(382);
