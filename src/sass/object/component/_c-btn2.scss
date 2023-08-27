@@ -12,8 +12,12 @@
     font-weight: 400;
     letter-spacing: .04em;
     line-height: calc(24/15);
-    padding: myrem(5) myrem(69) myrem(5) 0;
-    max-width: myrem(147);
+    padding: myrem(5) myrem(55) myrem(5) 0;
+
+    @include mq(md) {
+        padding: myrem(5) myrem(69) myrem(5) 0;
+        max-width: myrem(147);
+    }
 }
 
 .c-btn2:hover,

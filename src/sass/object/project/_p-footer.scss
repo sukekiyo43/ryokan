@@ -6,48 +6,118 @@
 
 .p-footer__inner {
     display: flex;
-    justify-content: space-between;
-    max-width: myrem(1250);
-    padding: myrem(160) myrem(25);
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: myrem(100) myrem(20) myrem(30);
+    gap: myrem(30);
+
+    @include mq(md) {
+        gap: 0;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: myrem(1250);
+        padding: myrem(154) myrem(25);
+        margin: 0 auto;
+        justify-content: space-between;
+    }
 }
 
 .p-footer__logo {
     display: inline-block;
-    width: myrem(161);
-    height: myrem(142);
+    width: myrem(110);
+    height: myrem(96);
+
+    @include mq(md) {
+        margin-top: myrem(6);
+        width: myrem(161);
+        height: myrem(142);
+        // margin-right: auto;
+    }
 }
 
 .p-footer__menu-container {
     display: flex;
+    gap: myrem(5);
+
+    @include mq(md) {
+        gap: 0;
+        justify-content: flex-start;
+    }
 }
 
 .p-footer__menu {
-    margin-top: myrem(-6);
-    margin-right: myrem(81);
+
+    @include mq(md) {
+        margin-right: myrem(74);
+    }
+}
+
+.p-footer__guide-container {
+    display: flex;
+    flex-direction: column;
+    // width: myrem(141);
+
+
+    @include mq(md) {
+        // flex-shrink: 0;
+        // max-width: myrem(256);
+    }
 }
 
 .p-footer__guide {
-    display: grid;
-    gap: myrem(16);
-    margin-bottom: myrem(32);
+    margin-bottom: myrem(9);
+
+    @include mq(md) {
+        margin-top: -2px;
+        // width: myrem(170);
+        margin-bottom: myrem(24);
+        margin-right: myrem(114);
+    }
 }
 
-.p-footer__guide-text {
+.p-footer__guide-text-core {
+    display: inline-block;
+    width: 100%;
     color: $white;
     font-size: myrem(12);
     letter-spacing: .04em;
     line-height: calc(19.8/12);
+    padding: myrem(5.5) myrem(8);
+
+    @include mq(md) {
+        max-width: 200px;
+        padding: myrem(8);
+    }
 }
 
 .p-footer__sns {
-    margin-bottom: myrem(25);
+    padding-left: myrem(8);
+    margin-bottom: myrem(32);
 }
 
-.p-footer__copyright {
+.p-footer__copyright-pc,
+.p-footer__copyright-sp {
     color: $white;
     font-size: myrem(10);
     font-weight: 400;
     letter-spacing: .14em;
     font-family: $font-copy;
+    white-space: nowrap;
+}
+
+.p-footer__copyright-pc {
+    display: none;
+
+    @include mq(md) {
+        padding-left: myrem(8);
+        display: block;
+    }
+}
+
+.p-footer__copyright-sp {
+    display: block;
+
+    @include mq(md) {
+        display: none;
+    }
 }

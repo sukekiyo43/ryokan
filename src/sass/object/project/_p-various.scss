@@ -6,7 +6,7 @@
 
 .p-various__inner {
     position: relative;
-    padding: myrem(100) myrem(20) myrem(100);
+    padding: myrem(100) myrem(5) myrem(100);
 
     @include mq(md) {
         max-width: 100%;
@@ -71,7 +71,9 @@
 }
 
 .p-various__card {
-    max-width: myrem(350);
+    max-width: myrem(370);
+    max-width: 360px;
+    // width: fi;
 
     @include mq(md) {
         max-width: myrem(382);

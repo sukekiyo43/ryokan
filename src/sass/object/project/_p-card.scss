@@ -2,7 +2,12 @@
 
 .p-card__body {
     position: relative;
-    padding-left: myrem(30);
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq(md) {
+        padding-left: myrem(30);
+    }
 }
 
 .p-card__eng {
@@ -26,14 +31,20 @@
 
 .p-card__ja {
     position: absolute;
-    top: myrem(-3);
-    left: myrem(-6.5);
-    font-size: myrem(60);
     font-weight: 400;
     letter-spacing: .22em;
     line-height: calc(72/60);
     writing-mode: vertical-rl;
     color: $text_brown;
+    font-size: myrem(45);
+    top: 0;
+    left: myrem(-6);
+
+    @include mq(md) {
+        top: myrem(-3);
+        left: myrem(-6.5);
+        font-size: myrem(60);
+    }
 }
 
 .p-card__img {

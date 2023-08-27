@@ -68,12 +68,12 @@
 .p-gallery__body {
     background-image: url(../images/gallery.png);
     background-repeat: repeat-x;
-    animation: bgscrollsp 65s linear infinite;
+    // animation: bgscrollsp 5s linear infinite;
     background-size: myrem(1337) myrem(214);
     min-height: myrem(214);
 
     @include mq(md) {
-        animation: bgscrollpc 65s linear infinite;
+        // animation: bgscrollpc 5s linear infinite;
         min-height: myrem(320);
         background-size: myrem(1984) myrem(320);
         background-position: myrem(-32) 0;
@@ -96,6 +96,6 @@
     }
 
     100% {
-        background-position: myrem(-1984) 0;
+        background-position: -1984px 0;
     }
 }

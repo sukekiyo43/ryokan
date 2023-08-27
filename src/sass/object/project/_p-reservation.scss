@@ -7,6 +7,12 @@
 .p-reservation__inner {
     position: relative;
     overflow: hidden;
+    height: myrem(322);
+
+    @include mq(md) {
+        height: myrem(451);
+        max-width: auto;
+    }
 }
 
 .p-reservation__bg-box {
@@ -28,37 +34,59 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    min-height: myrem(451);
-    max-width: myrem(1440);
-    padding-left: myrem(25);
-    margin: 0 auto;
+    height: myrem(322);
+    padding-left: myrem(20);
+
+    @include mq(md) {
+        height: myrem(451);
+        max-width: myrem(1440);
+        padding-left: myrem(25);
+        margin: 0 auto;
+    }
 }
 
 .p-reservation__tel {
-    margin-left: myrem(175);
-    margin-bottom: myrem(85);
+    margin-left: 10vw;
+    margin-bottom: myrem(76);
+    font-size: myrem(28);
+
+    @include mq(md) {
+        font-size: myrem(16);
+        margin-left: myrem(175);
+        margin-bottom: myrem(85);
+    }
 }
 
 .p-reservation__text {
-    font-size: myrem(24);
+    font-size: myrem(16);
     font-weight: 400;
     line-height: calc(38.4/24);
     letter-spacing: .04em;
     color: $white;
-    margin-bottom: myrem(16);
+
+    @include mq(md) {
+        font-size: myrem(24);
+        margin-bottom: myrem(16);
+    }
 }
 
 .p-reservation__number {
-    font-size: myrem(40);
     font-weight: 400;
     line-height: calc(64/40);
     letter-spacing: .04em;
     color: $white;
+
+    @include mq(md) {
+        font-size: myrem(40);
+    }
 }
 
 .p-reservation__title {
-    margin-left: auto;
-    margin-right: clamp(-0.3125rem, -22.8125rem + 25vw, 7.1875rem);
-    margin-bottom: 1px;
     line-height: .5;
+    margin-left: auto;
+
+    @include mq(md) {
+        margin-right: clamp(-0.3125rem, -22.8125rem + 25vw, 7.1875rem);
+        margin-bottom: 1px;
+    }
 }
