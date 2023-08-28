@@ -154,17 +154,17 @@
     background-repeat: repeat-x;
     background-size: myrem(1770) myrem(214);
     height: myrem(214);
-    animation: bgscrollsp 65s linear infinite;
+    animation: stayscrollsp 65s linear infinite;
 
     @include mq(md) {
         background-size: myrem(2482) myrem(300);
         background-position: myrem(-167) center;
         height: myrem(300);
-        animation: bgscrollpc 65s linear infinite;
+        animation: stayscrollpc 65s linear infinite;
     }
 }
 
-@keyframes bgscrollsp {
+@keyframes stayscrollsp {
     from {
         background-position: 0 0;
     }
@@ -174,7 +174,7 @@
     }
 }
 
-@keyframes bgscrollpc {
+@keyframes stayscrollpc {
     from {
         background-position: 0 0;
     }

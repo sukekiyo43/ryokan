@@ -38,6 +38,7 @@
 .p-footer__menu-container {
     display: flex;
     gap: myrem(5);
+    margin-bottom: 25px;
 
     @include mq(md) {
         gap: 0;

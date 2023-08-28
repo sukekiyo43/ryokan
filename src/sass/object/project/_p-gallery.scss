@@ -68,19 +68,19 @@
 .p-gallery__body {
     background-image: url(../images/gallery.png);
     background-repeat: repeat-x;
-    // animation: bgscrollsp 5s linear infinite;
+    animation: galleryscrollsp 65s linear infinite;
     background-size: myrem(1337) myrem(214);
-    min-height: myrem(214);
+    height: myrem(214);
 
     @include mq(md) {
-        // animation: bgscrollpc 5s linear infinite;
-        min-height: myrem(320);
+        animation: galleryscrollpc 65s linear infinite;
+        height: myrem(320);
         background-size: myrem(1984) myrem(320);
         background-position: myrem(-32) 0;
     }
 }
 
-@-webkit-keyframes bgscrollsp {
+@-webkit-keyframes galleryscrollsp {
     0% {
         background-position: 0 0;
     }
@@ -90,7 +90,7 @@
     }
 }
 
-@-webkit-keyframes bgscrollpc {
+@-webkit-keyframes galleryscrollpc {
     0% {
         background-position: 0 0;
     }
