@@ -43,6 +43,15 @@ $(function () {
   $(".js-fadeUp").on("inview", function () {
     $(this).addClass("is-inview");
   });
+  $(".js-fadeRight").on("inview", function () {
+    $(this).addClass("is-inview");
+  });
+  $(".js-fadeLeft").on("inview", function () {
+    $(this).addClass("is-inview");
+  });
+  $(".js-fade").on("inview", function () {
+    $(this).addClass("is-inview");
+  });
 });
 
 

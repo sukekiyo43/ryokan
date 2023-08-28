@@ -10,6 +10,7 @@
     width: fit-content;
     padding-top: clamp(11.25rem, 7.9616rem + 14.0306vw, 14.6875rem);
     padding-bottom: myrem(260);
+    transition: .5s;
 
     @include mq(md) {
         padding-top: myrem(235);

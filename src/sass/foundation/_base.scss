@@ -47,3 +47,88 @@ button {
     }
   }
 }
+
+// 要素のフェードインアニメの設定
+
+// 下から上にフェード
+.js-fadeUp {
+  opacity: 0;
+  transform: translateY(myrem(15));
+}
+
+.js-fadeUp.is-inview {
+  animation: fadeup 0.8s 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 左から右へフェード
+.js-fadeRight {
+  opacity: 0;
+  transform: translateX(myrem(-70));
+}
+
+.js-fadeRight.is-inview {
+  animation: faderight 1s .5s forwards;
+}
+
+@keyframes faderight {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// 右から左へフェード
+.js-fadeLeft {
+  opacity: 0;
+  transform: translateX(myrem(70));
+}
+
+.js-fadeLeft.is-inview {
+  animation: faderight 1s .5s forwards;
+}
+
+@keyframes fadeleft {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// その場でフェード
+.js-fade {
+  opacity: 0;
+}
+
+.js-fade.is-inview {
+  animation: fade 1s .5s forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
