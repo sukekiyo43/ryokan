@@ -12,7 +12,9 @@
 }
 
 .c-btn1:hover {
-    opacity: 1;
-    color: $text;
-    background-color: $white;
+    @include mq(md) {
+        opacity: 1;
+        color: $text;
+        background-color: $white;
+    }
 }

@@ -240,6 +240,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
+    will-change: opacity;
 }
 
 .p-mv__sns-text:first-child {

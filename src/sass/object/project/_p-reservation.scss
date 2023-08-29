@@ -7,11 +7,10 @@
 .p-reservation__inner {
     position: relative;
     overflow: hidden;
-    height: myrem(322);
+    min-height: myrem(322);
 
     @include mq(md) {
-        height: myrem(451);
-        max-width: auto;
+        min-height: myrem(451);
     }
 }
 
@@ -34,11 +33,11 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: myrem(322);
+    min-height: myrem(322);
     padding-left: myrem(20);
 
     @include mq(md) {
-        height: myrem(451);
+        min-height: myrem(451);
         max-width: myrem(1440);
         padding-left: myrem(25);
         margin: 0 auto;

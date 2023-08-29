@@ -45,6 +45,7 @@
 
     @include mq(md) {
         flex-direction: row;
+        flex-wrap: wrap;
         max-width: myrem(1260);
         gap: clamp(1.25rem, -3.7917rem + 7.3333vw, 2.625rem);
         margin: 0 auto;
@@ -71,12 +72,11 @@
 }
 
 .p-various__card {
-    max-width: myrem(370);
-    max-width: 360px;
-    // width: fi;
+    max-width: myrem(360);
 
     @include mq(md) {
         max-width: myrem(382);
+        width: 31.32%;
     }
 }
 
