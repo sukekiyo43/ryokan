@@ -103,7 +103,7 @@
     width: myrem(171);
 
     @include mq(md) {
-        width: myrem(185);
+        width: myrem(184);
         flex-direction: column;
         margin-right: -1px;
     }

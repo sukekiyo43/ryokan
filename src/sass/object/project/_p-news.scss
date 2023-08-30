@@ -141,10 +141,10 @@
     margin: 0 auto;
     max-width: myrem(200);
     max-height: myrem(128);
+    width: 100%;
+    aspect-ratio: 200/128;
 
     @include mq(md) {
-        max-width: myrem(200);
-        max-height: myrem(128);
         margin-right: myrem(48);
         flex-shrink: 0;
     }

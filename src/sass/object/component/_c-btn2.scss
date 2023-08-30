@@ -21,6 +21,10 @@
     right: 3px;
     transform: translateY(-50%);
     margin-top: 2px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-width: myrem(34);
+    max-height: myrem(34);
 }
 
 .c-btn2:hover {

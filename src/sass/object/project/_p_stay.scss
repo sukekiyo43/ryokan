@@ -13,10 +13,7 @@
     transition: .5s;
 
     @include mq(md) {
-        padding-top: myrem(235);
-        padding-bottom: myrem(118);
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: myrem(235) myrem(20) myrem(118);
     }
 }
 
@@ -32,7 +29,7 @@
 
     @include mq(md) {
         bottom: myrem(107);
-        left: myrem(-255);
+        left: myrem(-235);
         width: myrem(237);
         height: myrem(66);
     }
@@ -52,7 +49,7 @@
         width: myrem(264);
         height: myrem(69);
         top: myrem(122);
-        right: myrem(-232);
+        right: myrem(-212);
     }
 }
 
@@ -84,7 +81,7 @@
 
     @include mq(md) {
         right: clamp(-7.8125rem, -33.5506rem + 38.3436vw, 0rem);
-        bottom: myrem(30);
+        bottom: myrem(25);
         width: myrem(360);
         height: myrem(360);
     }

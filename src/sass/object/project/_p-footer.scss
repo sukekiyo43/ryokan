@@ -31,14 +31,13 @@
         margin-top: myrem(6);
         width: myrem(161);
         height: myrem(142);
-        // margin-right: auto;
     }
 }
 
 .p-footer__menu-container {
     display: flex;
     gap: myrem(5);
-    margin-bottom: 25px;
+    margin-bottom: myrem(25);
 
     @include mq(md) {
         gap: 0;
@@ -56,13 +55,6 @@
 .p-footer__guide-container {
     display: flex;
     flex-direction: column;
-    // width: myrem(141);
-
-
-    @include mq(md) {
-        // flex-shrink: 0;
-        // max-width: myrem(256);
-    }
 }
 
 .p-footer__guide {
@@ -70,7 +62,6 @@
 
     @include mq(md) {
         margin-top: -2px;
-        // width: myrem(170);
         margin-bottom: myrem(24);
         margin-right: myrem(114);
     }
@@ -86,7 +77,7 @@
     padding: myrem(5.5) myrem(8);
 
     @include mq(md) {
-        max-width: 200px;
+        max-width: myrem(200);
         padding: myrem(8);
     }
 }
