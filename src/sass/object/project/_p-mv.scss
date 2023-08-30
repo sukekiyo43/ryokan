@@ -1,23 +1,36 @@
 @use "global" as *;
 
 .p-mv {
-    display: flex;
+    display: block;
+
+    @include mq(md) {
+        display: flex;
+    }
 }
 
 .p-mv__wrap {
     width: 100%;
-    max-width: myrem(1720);
-    min-height: myrem(664);
+    height: myrem(530);
+
+    @include mq(md) {
+        max-width: myrem(1720);
+        height: myrem(664);
+    }
 }
 
 .p-mv__body {
-    width: 100%;
-    height: 100%;
-    max-height: myrem(584);
     position: relative;
-    padding-top: myrem(194);
-    padding-left: clamp(6.25rem, -38.75rem + 50vw, 21.25rem);
-    aspect-ratio: 1720/584;
+    width: 100%;
+    height: myrem(450);
+    padding-top: myrem(153);
+    padding-left: clamp(1.25rem, -3.5582rem + 20.4604vw, 6.25rem);
+    overflow: hidden;
+
+    @include mq(md) {
+        height: myrem(584);
+        padding-top: myrem(194);
+        padding-left: clamp(6.25rem, -38.75rem + 50vw, 21.25rem);
+    }
 }
 
 .p-mv__body::after {
@@ -26,7 +39,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 101%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -36,11 +49,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: myrem(584);
-    aspect-ratio: 1720/584;
+    height: myrem(450);
     animation: change-item 24s infinite;
     animation-delay: 0s;
     opacity: 0;
+
+    @include mq(md) {
+        height: myrem(584);
+    }
 }
 
 .p-mv__img2 {
@@ -56,28 +72,58 @@
     width: 100%;
     height: 100%;
     max-width: myrem(1720);
-    aspect-ratio: 1720/584;
     object-fit: cover;
 }
 
 .p-mv__title {
     position: relative;
-    font-size: myrem(48);
+    font-size: clamp(1.5625rem, 0.9615rem + 2.5575vw, 2.1875rem);
     font-weight: 400;
     letter-spacing: .04em;
     line-height: calc(72/48);
     z-index: 10;
     color: $white;
+
+    @include mq(md) {
+        font-size: myrem(48);
+    }
 }
 
 .p-mv__title::after {
     display: block;
     content: attr(date-en);
-    font-size: myrem(16);
+    font-size: clamp(0.75rem, 0.6298rem + 0.5115vw, 0.875rem);
     font-weight: 400;
     letter-spacing: .04em;
     font-family: $font-title;
-    margin-top: myrem(28);
+    margin-top: clamp(0.75rem, 0.3894rem + 1.5345vw, 1.125rem);
+
+    @include mq(md) {
+        font-size: myrem(16);
+        margin-top: myrem(28);
+    }
+}
+
+.p-mv__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: myrem(80);
+    padding: 0 myrem(20);
+
+    @include mq(md) {
+        justify-content: end;
+        padding: 0;
+        height: auto;
+    }
+}
+
+.p-mv__sns-sp {
+    display: flex;
+
+    @include mq(md) {
+        display: none;
+    }
 }
 
 .p-mv__pagination {
@@ -85,13 +131,20 @@
     align-items: center;
     justify-content: end;
     min-height: myrem(21);
-    margin-top: myrem(21);
+
+    @include mq(md) {
+        margin-top: myrem(21);
+    }
 }
 
 .p-mv__pagination-numbers {
     position: relative;
     width: myrem(8);
-    height: myrem(21);
+    height: myrem(18);
+
+    @include mq(md) {
+        height: myrem(21);
+    }
 }
 
 .p-mv__pagination-1,
@@ -99,11 +152,15 @@
 .p-mv__pagination-3 {
     position: absolute;
     color: $white;
-    font-size: myrem(14);
+    font-size: myrem(12);
     font-weight: 400;
     animation: change-item 24s infinite;
     animation-delay: 0s;
     opacity: 0;
+
+    @include mq(md) {
+        font-size: myrem(14);
+    }
 }
 
 .p-mv__pagination-2 {
@@ -138,24 +195,37 @@
 }
 
 .p-mv__pagination-line {
-    width: myrem(60);
+    width: myrem(40);
     height: 1px;
-    margin: 0 myrem(12) 0;
+    margin: 0 myrem(8) 0;
     background-color: $white;
+
+    @include mq(md) {
+        margin: 0 myrem(12) 0;
+        width: myrem(60);
+    }
 }
 
 .p-mv__pagination-number3 {
     color: $white;
-    font-size: myrem(14);
+    font-size: myrem(12);
     font-weight: 400;
+
+    @include mq(md) {
+        font-size: myrem(14);
+    }
 }
 
-
 .p-mv__sns {
-    position: relative;
-    min-width: myrem(100);
-    height: myrem(584);
+    display: none;
 
+    @include mq(md) {
+        display: block;
+        position: relative;
+        min-width: myrem(100);
+        height: myrem(584);
+        flex-shrink: 0;
+    }
 }
 
 .p-mv__sns-text {
@@ -170,6 +240,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
+    will-change: opacity;
 }
 
 .p-mv__sns-text:first-child {

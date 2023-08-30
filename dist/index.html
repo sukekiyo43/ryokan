@@ -2,20 +2,22 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <!-- meta情報 -->
   <title>ここめいと</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- noindex,nofollow設定 -->
+  <meta name="robots" content="noindex,nofollow">
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
   <!-- GoogleFonts/ Zen Maru Gothic/Zen Old Mincho-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,33 +27,41 @@
 
   <link rel="stylesheet" href="https://use.typekit.net/geu0lzc.css">
   <!-- ファビコン -->
-  <link rel="icon" href="./images/icon.svg" />
+  <link rel="icon" href="./images/icon.svg">
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./js/jquery.inview.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
-<body>
+<body class="js-body">
   <header class="p-header">
     <div class="p-header__wrap">
-      <h1 class="p-header__logo">
+      <h1 class="p-header__logo js-logo">
         <a href="index.html">
           <img src="./images/header-logo.svg" alt="ヘッダーロゴ">
         </a>
       </h1>
-      <nav class="p-header__menu p-menu">
-        <ul class="p-menu__items">
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>ここめいとについて</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>宿泊</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お食事</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>体験</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>アクセス</span></a></li>
-          <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お問い合わせ</span></a></li>
-          <li class="p-menu__btn"><a class="c-btn1" href="">ご予約はこちら</a></li>
-        </ul>
+      <nav class="p-header__menu p-menu js-menu">
+        <div class="p-menu__inner">
+          <ul class="p-menu__items">
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>ここめいとについて</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>宿泊</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お食事</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>体験</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>アクセス</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>お問い合わせ</span></a></li>
+            <li class="p-menu__btn"><a class="c-btn1" href="">ご予約はこちら</a></li>
+          </ul>
+        </div>
       </nav>
+      <button class="p-header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
     <div class="p-mv p-header__mv">
       <div class="p-mv__wrap">
@@ -69,14 +79,24 @@
             大切な人と過ごす場所、<br>ここめいと。
           </p>
         </div>
-        <div class="p-mv__pagination">
-          <div class="p-mv__pagination-numbers">
-            <span class="p-mv__pagination-1">1</span>
-            <span class="p-mv__pagination-2">2</span>
-            <span class="p-mv__pagination-3">3</span>
+        <div class="p-mv__bottom">
+          <div class="p-mv__sns-sp c-sns">
+            <a href="" class="c-sns__img">
+              <img src="./images/instagram.svg" alt="Instagramのアイコン">
+            </a>
+            <a href="" class="c-sns__img">
+              <img src="./images/twitter.svg" alt="Twitterのアイコン">
+            </a>
           </div>
-          <div class="p-mv__pagination-line"></div>
-          <div class="p-mv__pagination-number3">3</div>
+          <div class="p-mv__pagination">
+            <div class="p-mv__pagination-numbers">
+              <span class="p-mv__pagination-1">1</span>
+              <span class="p-mv__pagination-2">2</span>
+              <span class="p-mv__pagination-3">3</span>
+            </div>
+            <div class="p-mv__pagination-line"></div>
+            <div class="p-mv__pagination-number3">3</div>
+          </div>
         </div>
       </div>
       <div class="p-mv__sns">
@@ -86,68 +106,69 @@
     </div>
   </header>
 
-  <main>
+  <main class="l-main">
     <section class="p-stay">
       <div class="p-stay__body-wrap">
-        <div class="p-stay__body">
+        <div class="p-stay__body js-fadeUp">
           <h2 class="p-stay__title">Cocomate Stay</h2>
-          <div class="p-stay__text-wrap">
-            <p class="p-stay__text">
-              <span>大切な人と過ごす場所、</span>
-              <span>ここめいと。</span>
-              <span>日本の伝統と</span>
-              <span>現代の快適さが融合した、</span>
-              <span>穏やかな空間で</span>
-              <span>お迎えいたします。</span>
-            </p>
-            <p class="p-stay__text">
-              <span>四季折々の風情が楽しめる</span>
-              <span>ロケーションが特長です。</span>
-            </p>
-            <p class="p-stay__text">
-              <span>春は桜が咲き誇り、</span>
-              <span>夏は青々とした自然が</span>
-              <span>目を楽しませ、</span>
-              <span>秋は紅葉が鮮やかに染まり、</span>
-              <span>冬は雪景色が</span>
-              <span>美しい風景が広がります。</span>
-              <span>季節ごとの風情を</span>
-              <span>お楽しみいただきながら、</span>
-              <span>特別な思い出をつくりませんか。</span>
-            </p>
+          <div class="p-stay__text-container">
+            <div class="p-stay__text-wrap">
+              <p class="p-stay__text">
+                <span>大切な人と過ごす場所、</span>
+                <span class="p-stay__text-margin">ここめいと。</span>
+                <span>日本の伝統と</span>
+                <span>現代の快適さが融合した、</span>
+                <span>穏やかな空間で</span>
+                <span>お迎えいたします。</span>
+              </p>
+              <p class="p-stay__text">
+                <span>四季折々の風情が楽しめる</span>
+                <span>ロケーションが特長です。</span>
+              </p>
+              <p class="p-stay__text">
+                <span>春は桜が咲き誇り、</span>
+                <span>夏は青々とした自然が</span>
+                <span>目を楽しませ、</span>
+                <span>秋は紅葉が鮮やかに染まり、</span>
+                <span>冬は雪景色が</span>
+                <span class="p-stay__text-margin">美しい風景が広がります。</span>
+                <span>季節ごとの風情を</span>
+                <span>お楽しみいただきながら、</span>
+                <span>特別な思い出をつくりませんか。</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="p-stay__cloud1">
+        <div class="p-stay__cloud1 js-fadeRight">
           <img src="./images/stay-cloud1.png" alt="Cocomate Stayの背景雲1">
         </div>
-        <div class="p-stay__cloud2">
+        <div class="p-stay__cloud2 js-fadeLeft">
           <img src="./images/stay-cloud2.png" alt="Cocomate Stayの背景雲2">
         </div>
       </div>
-      <div class="p-stay__gallery"></div>
+      <div class="p-stay__gallery-box js-fade">
+        <div class="p-stay__gallery"></div>
+      </div>
     </section>
 
     <section class="p-guest">
       <div class="p-guest__inner">
-        <div class="p-guest__body">
+        <div class="p-guest__body js-fadeLeft">
           <div class="p-guest__guidance">
             <div class="p-guest__guidance-wrap">
-              <h2 class="p-guest__title c-section-title" date-ja="客室案内">Guest Room</h2>
+              <div class="p-guest__title">
+                <h2 class="c-section-title c-section-title--sub-white" date-ja="客室案内">Guest Room</h2>
+              </div>
               <div class="c-guidance">
                 <p class="c-guidance__text">
-                  大正時代の美意識を現代に伝える<br>
-                  空間づくりが特徴。<br>
-                  暮らすような宿滞在、<br>
-                  知的好奇心を満たす宿泊体験を<br>
-                  お楽しみください。
+                  大正時代の美意識を現代に伝える<br class="c-guidance__text-br">空間づくりが特徴。<br class="c-guidance__text-br">暮らすような宿滞在、<br
+                    class="c-guidance__text-br">知的好奇心を満たす宿泊体験を<br class="c-guidance__text-br">お楽しみください。
                 </p>
-                <button class="c-guidance__btn-wrap">
-                  <a class="c-guidance__btn" href="">
-                    <span class="c-guidance__btn-core">
-                      客室について
-                    </span>
-                  </a>
-                </button>
+                <a class="c-guidance__btn" href="">
+                  <span class="c-guidance__btn-core">
+                    客室について
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -155,7 +176,7 @@
             <img src="./images/guest.jpg" alt="客室案内の画像">
           </div>
         </div>
-        <div class="p-guest__cloud">
+        <div class="p-guest__cloud js-fadeRight">
           <img src="./images/guest-cloud.png" alt="guestの背景雲">
         </div>
       </div>
@@ -163,35 +184,32 @@
 
     <section class="p-dining">
       <div class="p-dining__inner">
-        <div class="p-dining__body">
+        <div class="p-dining__body js-fadeRight">
           <div class="p-dining__body-inner">
             <div class="p-dining__img">
               <img src="./images/dining.jpg" alt="diningの画像">
             </div>
             <div class="p-dining__guidance">
               <div class="p-dining__guidance-wrap">
-                <h2 class="p-dining__title c-section-title" date-ja="お食事">Dining</h2>
+                <div class="p-dining__title">
+                  <h2 class="c-section-title c-section-title--sub-white" date-ja="お食事">Dining</h2>
+                </div>
                 <div class="c-guidance">
                   <p class="c-guidance__text">
-                    近海で採れる海の幸をはじめ、<br>
-                    専任のシェフが厳選した<br>
-                    最上級の旬素材を<br>
-                    取り寄せてお届けする<br>
-                    フルコースをご堪能ください。
+                    近海で採れる海の幸をはじめ、<br class="c-guidance__text-br">専任のシェフが厳選した<br class="c-guidance__text-br">最上級の旬素材を<br
+                      class="c-guidance__text-br">取り寄せてお届けする<br class="c-guidance__text-br">フルコースをご堪能ください。
                   </p>
-                  <button class="c-guidance__btn-wrap">
-                    <a class="c-guidance__btn" href="">
-                      <span class="c-guidance__btn-core">
-                        お食事について
-                      </span>
-                    </a>
-                  </button>
+                  <a class="c-guidance__btn" href="">
+                    <span class="c-guidance__btn-core">
+                      お食事について
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="p-dining__cloud">
+        <div class="p-dining__cloud js-fadeLeft">
           <img src="./images/dining-cloud.png" alt="diningの背景雲">
         </div>
       </div>
@@ -201,25 +219,25 @@
       <div class="p-activity__inner">
         <picture class="p-activity__bg-box">
           <source class="so" srcset="./images/activity-bg1440.jpg" media="(max-width: 1440px)">
-          <img src="./images/activity-bg1920.jpg" alt="">
+          <img src="./images/activity-bg1920.jpg" alt="activity1920pxサイズの画像">
         </picture>
-        <div class="p-activity__item-wrap">
+        <div class="p-activity__item-wrap js-fade">
           <div class="p-activity__body">
-            <h2 class="p-activity__title c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+            <div class="p-activity__title">
+              <h2 class="c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+            </div>
             <div class="p-activity__guidance">
               <div class="c-guidance c-guidance--wide">
                 <p class="c-guidance__text c-guidance__text--white">
-                  地域の伝統的な文化や工芸品づくり、<br>
-                  地元料理の試食など、<br>
+                  地域の伝統的な文化や工芸品づくり、<br class="c-guidance__text-br">
+                  地元料理の試食など、<br class="c-guidance__text-br">
                   地元ならではの体験をお楽しみください。
                 </p>
-                <button class="c-guidance__btn-wrap">
-                  <a class="c-guidance__btn c-guidance__btn--white" href="">
-                    <span class="c-guidance__btn-core c-guidance__btn-core--white">
-                      詳しく見る
-                    </span>
-                  </a>
-                </button>
+                <a class="c-guidance__btn c-guidance__btn--white" href="">
+                  <span class="c-guidance__btn-core c-guidance__btn-core--white">
+                    詳しく見る
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -232,20 +250,20 @@
 
     <section class="p-various">
       <div class="p-various__inner">
-        <div class="p-various__cards">
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">History</p>
-              <p class="p-card__ja">歴史</p>
-              <div class="p-card__img">
-                <img src="./images/history.jpg" alt="歴史の画像">
-              </div>
-              <h3 class="p-card__title">歴史を学ぶ</h3>
-              <p class="p-card__text">
-                街のいたるところに歴史を物語る建物や史跡が残されています。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
+        <div class="p-various__inner-sp">
+          <div class="p-various__cards js-fadeUp">
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">History</p>
+                <p class="p-card__ja">歴史</p>
+                <div class="p-card__img">
+                  <img src="./images/history.jpg" alt="歴史の画像">
+                </div>
+                <h3 class="p-card__title">歴史を学ぶ</h3>
+                <p class="p-card__text">
+                  街のいたるところに歴史を物語る建物や史跡が残されています。
+                </p>
+                <a class="p-card__btn c-btn2" href="">
                   詳しく見る
                   <div class="c-btn2__img">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -256,22 +274,20 @@
                     </svg>
                   </div>
                 </a>
-              </button>
-            </div>
-          </div>
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">Tourism</p>
-              <p class="p-card__ja">観光</p>
-              <div class="p-card__img">
-                <img src="./images/tourism.jpg" alt="観光の画像">
               </div>
-              <h3 class="p-card__title">自然に触れる</h3>
-              <p class="p-card__text">
-                周辺には雄大な自然が織りなす絶景スポットも多数ございます。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
+            </div>
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">Tourism</p>
+                <p class="p-card__ja">観光</p>
+                <div class="p-card__img">
+                  <img src="./images/tourism.jpg" alt="観光の画像">
+                </div>
+                <h3 class="p-card__title">自然に触れる</h3>
+                <p class="p-card__text">
+                  周辺には雄大な自然が織りなす絶景スポットも多数ございます。
+                </p>
+                <a class="p-card__btn c-btn2" href="">
                   詳しく見る
                   <div class="c-btn2__img">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -282,22 +298,20 @@
                     </svg>
                   </div>
                 </a>
-              </button>
-            </div>
-          </div>
-          <div class="p-various__card p-card">
-            <div class="p-card__body">
-              <p class="p-card__eng">Food</p>
-              <p class="p-card__ja">食</p>
-              <div class="p-card__img">
-                <img src="./images/food.jpg" alt="食の画像">
               </div>
-              <h3 class="p-card__title">食を堪能する</h3>
-              <p class="p-card__text">
-                穏やかな気候で育ったフレッシュな野菜や果物を堪能できます。
-              </p>
-              <button class="p-card__btn c-btn2">
-                <a class="c-btn2__core" href="">
+            </div>
+            <div class="p-various__card p-card">
+              <div class="p-card__body">
+                <p class="p-card__eng">Food</p>
+                <p class="p-card__ja">食</p>
+                <div class="p-card__img">
+                  <img src="./images/food.jpg" alt="食の画像">
+                </div>
+                <h3 class="p-card__title">食を堪能する</h3>
+                <p class="p-card__text">
+                  穏やかな気候で育ったフレッシュな野菜や果物を堪能できます。
+                </p>
+                <a class="p-card__btn c-btn2" href="">
                   詳しく見る
                   <div class="c-btn2__img">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -308,33 +322,31 @@
                     </svg>
                   </div>
                 </a>
-              </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="p-various__cloud">
-          <img src="./images/various-cloud.png" alt="variousの背景雲">
+          <div class="p-various__cloud js-fadeRight">
+            <img src="./images/various-cloud.png" alt="variousの背景雲">
+          </div>
         </div>
       </div>
     </section>
 
     <section class="p-news">
-      <div class="p-news__inner">
+      <div class="p-news__inner js-fadeLeft">
         <div class="p-news__title-box">
           <h2 class="p-news__title c-section-title c-section-title--news" date-ja="お知らせ">News</h2>
-          <button class="c-btn2">
-            <a class="c-btn2__core" href="">
-              一覧を見る
-              <div class="c-btn2__img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                  <circle cx="17" cy="17" r="16.5" stroke="#222222" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
-                    fill="#222222" />
-                </svg>
-              </div>
-            </a>
-          </button>
+          <a class="p-news__btn c-btn2" href="">
+            一覧を見る
+            <div class="c-btn2__img">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                  fill="#222222" />
+              </svg>
+            </div>
+          </a>
         </div>
         <div class="p-news__body">
           <ul class="p-news__items">
@@ -371,33 +383,33 @@
 
     <section class="p-gallery">
       <div class="p-gallery__inner">
-        <div class="p-gallery__head">
+        <div class="p-gallery__head js-fadeRight">
           <h2 class="p-gallery__title c-section-title" date-ja="ギャラリー">Gallery</h2>
-          <button class="p-gallery__btn c-btn2">
-            <a class="c-btn2__core" href="">
-              一覧を見る
-              <div class="c-btn2__img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                  <circle cx="17" cy="17" r="16.5" stroke="#222222" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
-                    fill="#222222" />
-                </svg>
-              </div>
-            </a>
-          </button>
+          <a class="p-gallery__btn c-btn2" href="">
+            一覧を見る
+            <div class="c-btn2__img">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <circle cx="17" cy="17" r="16.5" stroke="#222222" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14 20.3626C15.1248 19.272 15.8239 17.7448 15.8239 16.0544C15.8239 14.4913 15.2262 13.0678 14.2469 12L20.8239 16.3485L14 20.3626Z"
+                  fill="#222222" />
+              </svg>
+            </div>
+          </a>
         </div>
-        <div class="p-gallery__body"></div>
+        <div class="p-gallery__body-box js-fade">
+          <div class="p-gallery__body"></div>
+        </div>
       </div>
     </section>
 
-    <section class="p-reservation l-reservation">
+    <section class="p-reservation">
       <div class="p-reservation__inner">
         <picture class="p-reservation__bg-box">
           <source class="so" srcset="./images/reservation-bg1440.jpg" media="(max-width: 1440px)">
-          <img src="./images/reservation-bg1920.jpg" alt="">
+          <img src="./images/reservation-bg1920.jpg" alt="reservation1920pxの背景画像">
         </picture>
-        <div class="p-reservation__text-wrap">
+        <div class="p-reservation__text-wrap js-fade">
           <div class="p-reservation__tel">
             <p class="p-reservation__text">ご予約はこちら</p>
             <p class="p-reservation__number"><span class="p-reservation__text">Tel. </span>022-1234-5678</p>
@@ -407,7 +419,7 @@
       </div>
     </section>
 
-    <section class="p-access">
+    <section class="p-access js-fade">
       <div class="p-access__inner">
         <div class="p-access__body">
           <h2 class="p-access__title c-section-title" date-ja="アクセス">Access</h2>
@@ -449,14 +461,17 @@
 
   <footer class="p-footer">
     <div class="p-footer__inner">
-      <a href="index.html" class="p-footer__logo">
-        <img src="./images/footer-logo.svg" alt="フッターロゴ">
-      </a>
+      <h2 class="p-footer__logo">
+        <a href="index.html">
+          <img src="./images/footer-logo.svg" alt="フッターロゴ">
+        </a>
+      </h2>
       <div class="p-footer__menu-container">
         <nav class="p-footer__menu p-menu">
           <ul class="p-menu__items p-menu__items--footer">
-            <li class="p-menu__item"><a class="p-menu__item-core p-menu__item-core--footer"
-                href=""><span>ここめいとについて</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core p-menu__item-core--footer" href=""><span>
+                  ここめいとについて
+                </span></a></li>
             <li class="p-menu__item"><a class="p-menu__item-core p-menu__item-core--footer" href=""><span>宿泊</span></a>
             </li>
             <li class="p-menu__item"><a class="p-menu__item-core p-menu__item-core--footer" href=""><span>お食事</span></a>
@@ -472,8 +487,10 @@
         </nav>
         <div class="p-footer__guide-container">
           <ul class="p-footer__guide">
-            <li class="p-footer__guide-text"><a href="">利用規約</a></li>
-            <li class="p-footer__guide-text"><a href="">プライバシーポリシー</a></li>
+            <li class="p-footer__guide-text"><a class="p-footer__guide-text-core" href="">利用規約</a></li>
+            <li class="p-footer__guide-text"><a class="p-footer__guide-text-core" href="">
+                プライバシーポリシー
+              </a></li>
           </ul>
           <div class="p-footer__sns c-sns">
             <a href="" class="c-sns__img">
@@ -483,9 +500,10 @@
               <img src="./images/twitter.svg" alt="Twitterのアイコン">
             </a>
           </div>
-          <small class="p-footer__copyright">Copyright(c) cocomate All Rights Reserved.</small>
+          <small class="p-footer__copyright-pc">Copyright(c) cocomate All Rights Reserved.</small>
         </div>
       </div>
+      <small class="p-footer__copyright-sp">Copyright(c) cocomate All Rights Reserved.</small>
     </div>
   </footer>
 </body>

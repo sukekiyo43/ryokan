@@ -1,24 +1,18 @@
 @use "global" as *;
 
-
-.c-btn2:hover {
-    opacity: 1;
-}
-
-.c-btn2__core {
+.c-btn2 {
     position: relative;
     display: inline-block;
     font-size: myrem(15);
     font-weight: 400;
     letter-spacing: .04em;
     line-height: calc(24/15);
-    padding: myrem(5) myrem(69) myrem(5) 0;
-    max-width: myrem(147);
-}
+    padding: myrem(5) myrem(55) myrem(5) 0;
 
-.c-btn2:hover,
-.c-btn2__core:hover {
-    opacity: 1;
+    @include mq(md) {
+        padding: myrem(5) myrem(69) myrem(5) 0;
+        max-width: myrem(147);
+    }
 }
 
 .c-btn2__img {
@@ -27,6 +21,14 @@
     right: 3px;
     transform: translateY(-50%);
     margin-top: 2px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-width: myrem(34);
+    max-height: myrem(34);
+}
+
+.c-btn2:hover {
+    opacity: 1;
 }
 
 .c-btn2,
@@ -35,10 +37,14 @@
     transition: .3s;
 }
 
-.c-btn2__core:hover .c-btn2__img path {
-    fill: $white;
+.c-btn2:hover .c-btn2__img path {
+    @include mq(md) {
+        fill: $white;
+    }
 }
 
-.c-btn2__core:hover .c-btn2__img circle {
-    fill: $text;
+.c-btn2:hover .c-btn2__img circle {
+    @include mq(md) {
+        fill: $text;
+    }
 }

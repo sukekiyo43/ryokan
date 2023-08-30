@@ -6,39 +6,109 @@
 
 .p-various__inner {
     position: relative;
-    padding: myrem(171) myrem(25) myrem(159);
+    padding: myrem(100) myrem(5) myrem(100);
+
+    @include mq(md) {
+        max-width: 100%;
+        padding: myrem(171) myrem(25) myrem(159);
+    }
+}
+
+.p-various__inner-sp {
+    display: block;
+    max-width: myrem(600);
+    margin: 0 auto;
+
+    @include mq(md) {
+        display: contents;
+    }
 }
 
 .p-various__cloud {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: myrem(476);
-    max-height: myrem(190);
+    max-width: myrem(320);
+    max-height: myrem(127);
+
+    @include mq(md) {
+        max-width: myrem(476);
+        max-height: myrem(190);
+    }
 }
 
 .p-various__cards {
     position: relative;
     display: flex;
-    max-width: myrem(1260);
-    gap: clamp(1.25rem, -3.7917rem + 7.3333vw, 2.625rem);
-    margin: 0 auto;
+    flex-direction: column;
+    gap: myrem(50);
+
+    @include mq(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: myrem(1260);
+        gap: clamp(1.25rem, -3.7917rem + 7.3333vw, 2.625rem);
+        margin: 0 auto;
+    }
 }
 
 .p-various__cards::after {
     position: absolute;
     content: '';
-    bottom: myrem(-49);
-    right: myrem(-138);
-    width: myrem(264);
-    height: myrem(69);
     background: url(../images/various-sub-cloud.png) no-repeat center/cover;
+    bottom: auto;
+    top: myrem(-80);
+    right: myrem(-60);
+    width: myrem(225);
+    height: myrem(58);
+
+    @include mq(md) {
+        top: auto;
+        bottom: myrem(-49);
+        right: myrem(-138);
+        width: myrem(264);
+        height: myrem(69);
+    }
 }
 
 .p-various__card {
-    max-width: myrem(382);
+    max-width: myrem(360);
+
+    @include mq(md) {
+        max-width: myrem(382);
+        width: 31.32%;
+    }
 }
 
-.p-various__card:nth-child(2) {
-    margin-top: myrem(50);
+
+.p-various__card:nth-child(3n+2) {
+    @include mq(md) {
+        margin-top: myrem(50);
+    }
+}
+
+.p-various__card:nth-child(4n+1) {
+    justify-self: flex-start;
+
+    @include mq(md) {
+        justify-self: initial;
+    }
+}
+
+.p-various__card:nth-child(2n) {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.p-various__card:nth-child(4n+3) {
+    margin-left: auto;
+
+    @include mq(md) {
+        margin-left: 0;
+    }
 }

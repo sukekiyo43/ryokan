@@ -8,10 +8,13 @@
     padding: myrem(13.5) myrem(25.5) myrem(15.5) myrem(26.5);
     border: 1px solid #FFF;
     transition: .5s;
+    white-space: nowrap;
 }
 
 .c-btn1:hover {
-    opacity: 1;
-    color: $text;
-    background-color: $white;
+    @include mq(md) {
+        opacity: 1;
+        color: $text;
+        background-color: $white;
+    }
 }

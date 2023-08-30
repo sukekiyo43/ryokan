@@ -2,48 +2,88 @@
 
 .p-access__inner {
     display: flex;
-    max-width: myrem(1440);
-    margin: 0 auto;
-    gap: myrem(30);
-    padding: myrem(181) 0 myrem(159) myrem(25);
+    flex-direction: column;
+    padding-top: myrem(100);
+
+    @include mq(md) {
+        flex-direction: row;
+        max-width: myrem(1440);
+        margin: 0 auto;
+        gap: myrem(30);
+        padding: myrem(181) 0 myrem(154) myrem(25);
+    }
 }
 
 .p-access__body {
-    margin-left: auto;
-    width: 50%;
-    max-width: myrem(450)
+    width: 100%;
+    margin-bottom: myrem(50);
+    padding: 0 myrem(20);
+
+    @include mq(md) {
+        padding: 0;
+        margin-left: auto;
+        width: 50%;
+        max-width: myrem(450)
+    }
 }
 
 .p-access__title {
-    margin-top: myrem(-26);
-    margin-bottom: myrem(54);
+    margin: 0 auto myrem(30);
+
+    @include mq(md) {
+        margin: myrem(-26) 0 myrem(54);
+    }
 }
 
 .p-access__detail {
     display: flex;
     flex-direction: column;
-    gap: myrem(31.5);
-    margin-left: myrem(80);
-    max-width: myrem(356);
-    width: 100%;
+    max-width: myrem(226);
+    gap: myrem(20);
+    margin: 0 auto;
+
+    @include mq(md) {
+        gap: myrem(31.5);
+        width: 100%;
+        max-width: myrem(356);
+        margin-left: myrem(80);
+    }
 }
 
 .p-access__text {
-    font-size: myrem(15);
+    font-size: myrem(14);
     font-weight: 400;
-    line-height: 2;
     letter-spacing: .04em;
+    line-height: 1.8;
+
+    @include mq(md) {
+        font-size: myrem(15);
+        line-height: 2;
+    }
 }
 
 .p-access__text-bold {
-    font-size: myrem(16);
+    font-size: myrem(15);
     font-weight: 700;
-    line-height: 2;
+    line-height: 1.8;
     letter-spacing: .04em;
+
+    @include mq(md) {
+        line-height: 2;
+        font-size: myrem(16);
+    }
 }
 
 .p-access__map {
     width: 100%;
-    max-width: myrem(840);
-    height: myrem(480);
+    height: myrem(350);
+
+    @include mq(md) {
+        max-width: myrem(840);
+        height: myrem(480);
+    }
+}
+
+.p-access__map iframe {
+    vertical-align: bottom;
 }

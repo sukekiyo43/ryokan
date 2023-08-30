@@ -2,29 +2,47 @@
 
 .c-section-title {
     position: relative;
-    font-size: myrem(160);
     font-family: $font-title;
     color: $text_en;
     font-weight: 400;
     letter-spacing: .04em;
     line-height: 1;
+    font-size: clamp(4.0625rem, 2.5678rem + 6.3776vw, 5.625rem);
+    width: fit-content;
+
+    @include mq(md) {
+        font-size: myrem(160);
+    }
 }
 
 .c-section-title::before {
-    font-family: $font-main;
-    top: myrem(8);
-    left: myrem(117);
     position: absolute;
+    font-family: $font-main;
     content: attr(date-ja);
-    font-size: myrem(20);
-    color: $text;
     line-height: calc(24/20);
     letter-spacing: .2em;
-    writing-mode: vertical-rl;
+    font-size: clamp(0.875rem, 0.7554rem + 0.5102vw, 1rem);
+    white-space: nowrap;
+    color: $text;
+    top: myrem(-15);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(md) {
+        transform: initial;
+        writing-mode: vertical-rl;
+        top: myrem(8);
+        left: myrem(117);
+        font-size: myrem(20);
+    }
 }
 
 .c-section-title--activity {
-    color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .8);
+
+    @include mq(md) {
+        color: rgba(255, 255, 255, .2);
+    }
 }
 
 .c-section-title--activity::before {
@@ -37,4 +55,12 @@
 
 .c-section-title--reservation {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.c-section-title--sub-white::before {
+    color: $white;
+
+    @include mq(md) {
+        color: $text;
+    }
 }
