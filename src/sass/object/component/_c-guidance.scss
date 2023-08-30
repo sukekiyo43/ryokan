@@ -91,6 +91,16 @@
     background-repeat: no-repeat;
 }
 
+_::-webkit-full-page-media,
+_:future,
+:root .c-guidance__btn--white {
+    height: myrem(60);
+
+    @include mq(md) {
+        width: myrem(250);
+    }
+}
+
 .c-guidance__btn-core--white {
     background-color: transparent;
     color: $white;

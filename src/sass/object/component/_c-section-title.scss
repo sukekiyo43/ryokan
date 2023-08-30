@@ -9,6 +9,7 @@
     line-height: 1;
     font-size: clamp(4.0625rem, 2.5678rem + 6.3776vw, 5.625rem);
     width: fit-content;
+    white-space: nowrap;
 
     @include mq(md) {
         font-size: myrem(160);
