@@ -2,25 +2,29 @@
 
 .c-section-title {
     position: relative;
+    width: fit-content;
+}
+
+.c-section-title__en {
     font-family: $font-title;
     color: $text_en;
     font-weight: 400;
     letter-spacing: .04em;
     line-height: 1;
     font-size: clamp(4.0625rem, 2.5678rem + 6.3776vw, 5.625rem);
-    width: fit-content;
     white-space: nowrap;
+    writing-mode: initial;
 
     @include mq(md) {
         font-size: myrem(160);
     }
 }
 
-.c-section-title::before {
-    position: absolute;
+.c-section-title__ja {
     font-family: $font-main;
-    content: attr(date-ja);
+    position: absolute;
     line-height: calc(24/20);
+    font-weight: 400;
     letter-spacing: .2em;
     font-size: clamp(0.875rem, 0.7554rem + 0.5102vw, 1rem);
     white-space: nowrap;
@@ -28,6 +32,7 @@
     top: myrem(-15);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 
     @include mq(md) {
         transform: initial;
@@ -38,27 +43,28 @@
     }
 }
 
-.c-section-title--activity {
-    color: rgba(255, 255, 255, .8);
+.c-section-title__en--activity {
+    color: $white;
 
     @include mq(md) {
         color: rgba(255, 255, 255, .2);
     }
 }
 
-.c-section-title--activity::before {
+.c-section-title__ja--activity {
     color: $white;
 }
 
-.c-section-title--news {
+.c-section-title__en--news {
     color: $white;
 }
 
 .c-section-title--reservation {
     color: rgba(255, 255, 255, 0.6);
+    line-height: 0;
 }
 
-.c-section-title--sub-white::before {
+.c-section-title__ja-white {
     color: $white;
 
     @include mq(md) {

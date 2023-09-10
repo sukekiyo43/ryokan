@@ -29,10 +29,13 @@
   <!-- ファビコン -->
   <link rel="icon" href="./images/icon.svg">
   <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./js/jquery.inview.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -66,16 +69,23 @@
     <div class="p-mv p-header__mv">
       <div class="p-mv__wrap">
         <div class="p-mv__body">
-          <div class="p-mv__img1">
-            <img src="./images/mv1.jpg" alt="mv1">
+          <div class="p-mv__swiper-container">
+            <div class="p-mv__swiper swiper">
+              <div class="p-mv__swiper-wrapper swiper-wrapper">
+                <div class="p-mv__swiper-slide swiper-slide">
+                  <img src="./images/mv1.jpg" alt="mv1">
+                </div>
+                <div class="p-mv__swiper-slide swiper-slide">
+                  <img src="./images/mv2.jpg" alt="mv2">
+                </div>
+                <div class="p-mv__swiper-slide swiper-slide">
+                  <img src="./images/mv3.jpg" alt="mv3">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="p-mv__img2">
-            <img src="./images/mv2.jpg" alt="mv2">
-          </div>
-          <div class="p-mv__img3">
-            <img src="./images/mv3.jpg" alt="mv3">
-          </div>
-          <p class="p-mv__title" date-en="A place to spend time with loved ones, cocomate.">
+          <p class="p-mv__title" data-en="A place to spend time with loved ones, cocomate.">
             大切な人と過ごす場所、<br>ここめいと。
           </p>
         </div>
@@ -87,15 +97,6 @@
             <a href="" class="c-sns__img">
               <img src="./images/twitter.svg" alt="Twitterのアイコン">
             </a>
-          </div>
-          <div class="p-mv__pagination">
-            <div class="p-mv__pagination-numbers">
-              <span class="p-mv__pagination-1">1</span>
-              <span class="p-mv__pagination-2">2</span>
-              <span class="p-mv__pagination-3">3</span>
-            </div>
-            <div class="p-mv__pagination-line"></div>
-            <div class="p-mv__pagination-number3">3</div>
           </div>
         </div>
       </div>
@@ -147,7 +148,30 @@
         </div>
       </div>
       <div class="p-stay__gallery-box js-fade">
-        <div class="p-stay__gallery"></div>
+        <div class="p-stay__gallery">
+          <div class="p-stay__gallery-swiper swiper2">
+            <div class="p-stay__gallery-swiper-wrapper swiper-wrapper">
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay1.jpg" alt="stayのスライド画像1">
+              </div>
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay2.jpg" alt="stayのスライド画像2">
+              </div>
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay3.jpg" alt="stayのスライド画像3">
+              </div>
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay4.jpg" alt="stayのスライド画像4">
+              </div>
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay5.jpg" alt="stayのスライド画像5">
+              </div>
+              <div class="p-stay__swiper-slide swiper-slide">
+                <img src="./images/stay6.jpg" alt="stayのスライド画像6">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -157,7 +181,10 @@
           <div class="p-guest__guidance">
             <div class="p-guest__guidance-wrap">
               <div class="p-guest__title">
-                <h2 class="c-section-title c-section-title--sub-white" date-ja="客室案内">Guest Room</h2>
+                <h2 class="c-section-title c-section-title--sub-white">
+                  <span class="c-section-title__ja c-section-title__ja-white">客室案内</span>
+                  <span class="c-section-title__en">Guest Room</span>
+                </h2>
               </div>
               <div class="c-guidance">
                 <p class="c-guidance__text">
@@ -192,7 +219,10 @@
             <div class="p-dining__guidance">
               <div class="p-dining__guidance-wrap">
                 <div class="p-dining__title">
-                  <h2 class="c-section-title c-section-title--sub-white" date-ja="お食事">Dining</h2>
+                  <h2 class="c-section-title c-section-title--sub-white">
+                    <span class="c-section-title__ja c-section-title__ja-white">お食事</span>
+                    <span class="c-section-title__en">Dining</span>
+                  </h2>
                 </div>
                 <div class="c-guidance">
                   <p class="c-guidance__text">
@@ -224,7 +254,10 @@
         <div class="p-activity__item-wrap js-fade">
           <div class="p-activity__body">
             <div class="p-activity__title">
-              <h2 class="c-section-title c-section-title--activity" date-ja="体験">Activity</h2>
+              <h2 class="c-section-title">
+                <span class="c-section-title__ja c-section-title__ja--activity ">体験</span>
+                <span class="c-section-title__en  c-section-title__en--activity">Activity</span>
+              </h2>
             </div>
             <div class="p-activity__guidance">
               <div class="c-guidance c-guidance--wide">
@@ -335,7 +368,10 @@
     <section class="p-news">
       <div class="p-news__inner js-fadeLeft">
         <div class="p-news__title-box">
-          <h2 class="p-news__title c-section-title c-section-title--news" date-ja="お知らせ">News</h2>
+          <h2 class="p-news__title c-section-title">
+            <span class="c-section-title__ja">お知らせ</span>
+            <span class="c-section-title__en c-section-title__en--news">News</span>
+          </h2>
           <a class="p-news__btn c-btn2" href="">
             一覧を見る
             <div class="c-btn2__img">
@@ -353,7 +389,7 @@
             <li class="p-news__item">
               <a class="p-news__item-body" href="">
                 <div class="p-news__text-box">
-                  <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
+                  <time class="p-news__data" datetime="2023-08-01">2023.08.01</time>
                   <p class="p-news__text">
                     コーポレートサイトリニューアルのお知らせ
                   </p>
@@ -366,7 +402,7 @@
             <li class="p-news__item">
               <a class="p-news__item-body" href="">
                 <div class="p-news__text-box">
-                  <time class="p-news__date" datetime="2023-08-01">2023.08.01</time>
+                  <time class="p-news__data" datetime="2023-08-01">2023.08.01</time>
                   <p class="p-news__text">
                     2023.9.10臨時休業のお知らせ
                   </p>
@@ -384,7 +420,10 @@
     <section class="p-gallery">
       <div class="p-gallery__inner">
         <div class="p-gallery__head js-fadeRight">
-          <h2 class="p-gallery__title c-section-title" date-ja="ギャラリー">Gallery</h2>
+          <h2 class="p-gallery__title c-section-title">
+            <span class="c-section-title__ja">ギャラリー</span>
+            <span class="c-section-title__en">Gallery</span>
+          </h2>
           <a class="p-gallery__btn c-btn2" href="">
             一覧を見る
             <div class="c-btn2__img">
@@ -397,8 +436,23 @@
             </div>
           </a>
         </div>
-        <div class="p-gallery__body-box js-fade">
-          <div class="p-gallery__body"></div>
+        <div class="p-gallery__swiper-box js-fade">
+          <div class="p-gallery__swiper swiper3">
+            <div class="p-gallery__swiper-wrapper swiper-wrapper">
+              <div class="p-gallery__swiper-slide swiper-slide">
+                <img src="./images/gallery1.jpg" alt="galleryのスライド画像1">
+              </div>
+              <div class="p-gallery__swiper-slide swiper-slide">
+                <img src="./images/gallery2.jpg" alt="galleryのスライド画像2">
+              </div>
+              <div class="p-gallery__swiper-slide swiper-slide">
+                <img src="./images/gallery3.jpg" alt="galleryのスライド画像3">
+              </div>
+              <div class="p-gallery__swiper-slide swiper-slide">
+                <img src="./images/gallery4.jpg" alt="galleryのスライド画像4">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -414,7 +468,9 @@
             <p class="p-reservation__text">ご予約はこちら</p>
             <p class="p-reservation__number"><span class="p-reservation__text">Tel. </span>022-1234-5678</p>
           </div>
-          <h2 class="p-reservation__title c-section-title c-section-title--reservation">Reservation</h2>
+          <h2 class="p-reservation__title c-section-title">
+            <span class="c-section-title__en c-section-title--reservation">Reservation</span>
+          </h2>
         </div>
       </div>
     </section>
@@ -422,7 +478,10 @@
     <section class="p-access js-fade">
       <div class="p-access__inner">
         <div class="p-access__body">
-          <h2 class="p-access__title c-section-title" date-ja="アクセス">Access</h2>
+          <h2 class="p-access__title c-section-title">
+            <span class="c-section-title__ja">アクセス</span>
+            <span class="c-section-title__en">Access</span>
+          </h2>
           <div class="p-access__detail">
             <div class="p-access__address">
               <p class="p-access__text">
