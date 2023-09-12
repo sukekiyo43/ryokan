@@ -65,13 +65,8 @@
     margin-bottom: myrem(-6);
 }
 
-
-
-
 .p-gallery__swiper-box {
-    max-width: myrem(1920);
-    margin: 0 auto;
-    overflow: hidden;
+    width: 100%;
     height: myrem(214);
 
     @include mq(md) {
@@ -79,7 +74,7 @@
     }
 }
 
-.p-gallery-swiper-wrapper {
+.p-gallery__swiper-wrapper {
     transition-timing-function: linear;
 }
 

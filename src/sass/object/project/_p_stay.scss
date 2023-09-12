@@ -169,9 +169,6 @@
 
 .p-stay__gallery {
     width: 100%;
-    max-width: myrem(1920);
-    overflow: hidden;
-    margin: 0 auto;
     height: myrem(214);
 
     @include mq(md) {
