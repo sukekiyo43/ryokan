@@ -86,24 +86,13 @@
     position: relative;
     background-color: transparent;
     border: solid 1px $white;
-    background-image: url(../images/btn-white-bg.svg);
-    background-size: 100.1% 100.1%;
-    background-repeat: no-repeat;
-}
-
-_::-webkit-full-page-media,
-_:future,
-:root .c-guidance__btn--white {
-    height: myrem(60);
-
-    @include mq(md) {
-        width: myrem(250);
-    }
+    overflow: hidden;
 }
 
 .c-guidance__btn-core--white {
     background-color: transparent;
     color: $white;
+    box-shadow: 0 0 0 10px $white;
 }
 
 .c-guidance__btn:hover .c-guidance__btn-core--white {
